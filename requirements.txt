@@ -1,7 +1,6 @@
 aiofiles
 bard
 pornhub-api==0.2.0
-asyncio==3.4.3
 aiohttp
 beautifulsoup4
 blackpink
@@ -30,7 +29,7 @@ pykeyboard
 pyshorteners
 pyrogram
 python-dotenv
-pyyaml==6.0.1
+pyyaml
 requests
 emojis
 speedtest-cli
@@ -38,7 +37,7 @@ spotipy
 tgcrypto
 telegraph
 unidecode
-git+https://github.com/yt-dlp/yt-dlp@master
+yt-dlp
 youtube-search
 youtube-search-python
 gtts
