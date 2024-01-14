@@ -4,8 +4,8 @@
 
 ![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=zzzdevo&repo=Z07&theme=flag-india)
 
-[![GIF](https://github.com/DAXXTEAM/DAXXMUSIC/blob/main/DAXXTEAM.gif)](https://github.com/DAXXTEAM)
-   [![𝐌𝐑.𝐃𝐀𝐗𝐗](https://github-stats-alpha.vercel.app/api?username=DAXXTEAM "MRDAXX")](https://github-stats-alpha.vercel.app/api?username=DAXXTEAM "MRDAXX")
+[![GIF](https://github.com/zzzdevo/Z07/blob/main/zzzdevo.gif)](https://github.com/zzzdevo)
+   [![IQ7amo](https://github-stats-alpha.vercel.app/api?username=zzzdevo "IQ7amo")](https://github-stats-alpha.vercel.app/api?username=zzzzdevo "IQ7amo")
 
 
 <p align="center">
@@ -24,7 +24,7 @@
 
 <p><img width="500" align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=DAXXTEAM&show_icons=true&locale=en&layout=compact" alt="DAXXTEAM" /></p>
 
-[![Contributors](https://contrib.rocks/image?repo=zzzdevo/Z07)](https://github.com/DAXXTEAM/DAXXMUSIC/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=zzzdevo/Z07)](https://github.com/zzzdevo/Z07/graphs/contributors)
 
 ### Contact :
 <a href="https://t.me/cyberdaxx"><img title="Telegram" src="https://img.shields.io/badge/Telegram-%23000000.svg?&style=for-the-badge&logo=telegram&logoColor=61DAFB"></a>
