@@ -9,7 +9,7 @@
 
 
 <p align="center">
-  <img src="https://telegra.ph/file/4abd6e0f613946553de53.jpg">
+  <img src="https://graph.org/file/5eb96c4141db368f17b84.jpg">
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
 
 <p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/zzzdevo/Z07"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-green?style=for-the-badge&logo=heroku" width="520" height="138.45"/></a></p>
 
-<p><img width="500" align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=DAXXTEAM&show_icons=true&locale=en&layout=compact" alt="DAXXTEAM" /></p>
+<p><img width="500" align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=zzzdevo&show_icons=true&locale=en&layout=compact" alt="zzzdevo" /></p>
 
 [![Contributors](https://contrib.rocks/image?repo=zzzdevo/Z07)](https://github.com/zzzdevo/Z07/graphs/contributors)
 
