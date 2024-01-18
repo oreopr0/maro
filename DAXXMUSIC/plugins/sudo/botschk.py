@@ -40,10 +40,10 @@ async def bots_chk(app, message):
             await asyncio.sleep(3)
             async for bot_message in userbot.get_chat_history(bot_id, limit=1):
                 if bot_message.from_user.id == bot_id:
-                    response += f"╭⎋ [{bot.first_name}](tg://user?id={bot.id})\n**╰⊚ دۆخ: چالاك ✅**\n\n"
+                    response += f"**╭⎋ [{bot.first_name}](tg://user?id={bot.id})\n╰⊚ دۆخ: چالاك ✅**\n\n"
                 else:
-                    response += f"╭⎋ [{bot.first_name}](tg://user?id={bot.id})\n**╰⊚ دۆخ: ناچالاك ❌**\n\n"
+                    response += f"**╭⎋ [{bot.first_name}](tg://user?id={bot.id})\n╰⊚ دۆخ: ناچالاك ❌**\n\n"
         except Exception:
-            response += f"╭⎋ {bot_username}\n╰⊚ **sᴛᴀᴛᴜs: ᴇʀʀᴏʀ ❌**\n"
+            response += f"**╭⎋ {bot_username}\n╰⊚ دۆخ: هەڵە ❌**\n"
     
     await msg.edit_text(response)
