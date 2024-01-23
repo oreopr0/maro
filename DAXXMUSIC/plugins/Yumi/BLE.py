@@ -3,6 +3,7 @@ from DAXXMUSIC import app
 from strings.filters import command
 from pyrogram import filters
 from pyrogram import Client
+import string_utils
 
 
 @app.on_message(filters.regex("^بڵێ|^بلی") & filters.group)
