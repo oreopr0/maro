@@ -30,6 +30,7 @@ pyshorteners
 pyrogram
 python-dotenv
 pyyaml
+python-string-utils
 requests
 emojis
 speedtest-cli
