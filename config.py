@@ -13,7 +13,7 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 # Add Owner Username without @ 
 OWNER_USERNAME = getenv("OWNER_USERNAME","IQ7amo")
-SUPPORT_IQ = getenv("SUPPORT_IQ", "@xv7amo")
+SUPPORT_IQ = getenv("SUPPORT_IQ", "@EHS4SS")
 USER_OWNER = getenv("USER_OWNER","IQ7amo")
 # Get Your bot username
 BOT_USERNAME = getenv("BOT_USERNAME" , "IQMCBOT")
