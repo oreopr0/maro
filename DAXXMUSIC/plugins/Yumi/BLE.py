@@ -4,6 +4,9 @@ from strings.filters import command
 from pyrogram import filters
 from pyrogram import Client
 import string_utils
+import time
+import csv
+import json
 
 
 @app.on_message(filters.regex("^بڵێ|^بلی") & filters.group)
@@ -18,15 +21,15 @@ async def say(app, message):
 
 
 @app.on_message(command(["دل","dl","dll","دڵ"]))
-async def haert(c, msg):
+async def haert(app, msg):
     for i in range(45):
         await msg.edit(string_utils.shuffle("🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔❤️‍🔥❤️‍🩹❣💕💞💓💗💖💘💝♥️‍"))
         time.sleep(0.1)
 
 
 @app.on_message(command(["دلی","dlly","dli","دڵی"]))
-async def haerts(c, msg):
-    for i in range(1, 15):
+async def haerts(app, msg):
+    for i in range(45):
         await msg.edit(string_utils.shuffle(
             "🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔❤️‍🔥❤️‍🩹❣💕💞💓💗💖💘💝♥️🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔❤️‍🔥❤️‍🩹❣💕💞💓💗💖💘💝♥️🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔❤️‍🔥❤️‍🩹❣💕💞💓💗💖💘💝♥️‍"))
         time.sleep(0.1)
