@@ -4,7 +4,22 @@ from pyrogram.types import Message
 from pyrogram import filters
 from pyrogram.types import(InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo, Message)
 from config import LOGGER_ID as LOG_GROUP_ID
-from DAXXMUSIC import app  
+from DAXXMUSIC import app 
+from pyrogram.errors import RPCError
+from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
+from os import environ
+from typing import Union, Optional
+from PIL import Image, ImageDraw, ImageFont
+from os import environ
+from pyrogram.types import ChatJoinRequest, InlineKeyboardButton, InlineKeyboardMarkup
+from PIL import Image, ImageDraw, ImageFont
+import asyncio, os, time, aiohttp
+from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont
+from asyncio import sleep
+from pyrogram import filters, Client, enums
+from pyrogram.enums import ParseMode
+
 
 photo = [
     "https://telegra.ph/file/1949480f01355b4e87d26.jpg",
@@ -12,8 +27,6 @@ photo = [
     "https://telegra.ph/file/a7d663cd2de689b811729.jpg",
     "https://telegra.ph/file/6f19dc23847f5b005e922.jpg",
     "https://telegra.ph/file/2973150dd62fd27a3a6ba.jpg",
-    "https://graph.org/file/774380facd73524f27d26.jpg",
-    "https://graph.org/file/afedfa59ab34d12c16519.jpg",
 ]
 
 
@@ -44,41 +57,9 @@ async def join_watcher(_, message):
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(_, message: Message):
     if (await app.get_me()).id == message.left_chat_member.id:
-        remove_by = message.from_user.mention if message.from_user else "**بەکارهێنەری نەناسراو**"
+        remove_by = message.from_user.mention if message.from_user else "𝐔ɴᴋɴᴏᴡɴ 𝐔sᴇʀ"
         title = message.chat.title
-        username = f"@{message.chat.username}" if message.chat.username else "**گرووپی تایبەت**"
+        username = f"@{message.chat.username}" if message.chat.username else "𝐏ʀɪᴠᴀᴛᴇ 𝐂ʜᴀᴛ"
         chat_id = message.chat.id
-        left = f"**✫ لێفتی گرووپ ✫\n\nناوی گرووپ : {title}\n\nئایدی گرووپ : {chat_id}\n\nدەرکرا لەلایەن : {remove_by}\n\nبۆت : @{app.username} **"
+        left = f"✫ <b><u>#𝐋ᴇғᴛ_𝐆ʀᴏᴜᴘ</u></b> ✫\n\n𝐂ʜᴀᴛ 𝐓ɪᴛʟᴇ : {title}\n\n𝐂ʜᴀᴛ 𝐈ᴅ : {chat_id}\n\n𝐑ᴇᴍᴏᴠᴇᴅ 𝐁ʏ : {remove_by}\n\n𝐁ᴏᴛ : @{app.username}"
         await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=left)
-
-#welcome
-@app.on_message(filters.new_chat_members, group=3)
-async def _greet(_, message):    
-    chat = message.chat
-    
-    for member in message.new_chat_members:
-        
-            count = await app.get_chat_members_count(chat.id)
-
-            msg = (
-                f"**🌷 بەخێربێی بۆ گرووپ {member.id} 🥳\n\n**"
-                f"**📌 ناوی گرووپ: {message.chat.title}\n**"
-                f"**🔐 یوزەری گرووپ: @{message.chat.username}\n**"
-                f"**💖 ئایدی: {member.id}\n**"
-                f"**✍️ یوزەر: @{member.username}\n**"
-                f"**👥 ژمارەی ئەندام {count} 🎉**"
-            )
-            await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, 
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [    
-                        InlineKeyboardButton(f"⦿ زیادم بکە بۆ کەناڵت ⦿", url=f"https://t.me/IQMCBOT?startchannel=true"),
-                    ],[
-                        InlineKeyboardButton(text="⦿ زیادم بکە بۆ گرووپت ⦿",
-                                         url=f"https://t.me/IQMCBOT?startgroup=true"),
-                  ]
-
-              ],  
-
-           ),
-        )
