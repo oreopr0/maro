@@ -50,7 +50,7 @@ GIT_TOKEN = getenv(
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MGIMT")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/IQSUPP")
-OWNER_CHANNEL = getenv("OWNER_CHANNEL", "https://t.me/mzzay")
+OWNER_CHANNEL = getenv("OWNER_CHANNEL", "https://t.me/EHS4SS")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -123,4 +123,10 @@ if SUPPORT_CHAT:
     if not re.match("(?:http|https)://", SUPPORT_CHAT):
         raise SystemExit(
             "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
+        )
+
+if OWNER_CHANNEL:
+    if not re.match("(?:http|https)://", OWNER_CHANNEL):
+        raise SystemExit(
+            "[ERROR] - Your SUPPORT_CHANNEL url is wrong. Please ensure that it starts with https://"
         )
