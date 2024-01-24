@@ -37,7 +37,7 @@ async def whisper(app, iquery):
     else:
       get = await app.get_chat(user)
       user = get.id
-      username = get.first_name
+      username = get.user.mention
       text = f"**🔒تۆ چرپەیەکت نارد بۆ ( {username} )\nتەنیا ئەو دەتوانێت بیکاتەوە🌚🖤**"
     send = await app.send_message(LOG, query)
     reply_markup = InlineKeyboardMarkup(
@@ -49,7 +49,7 @@ async def whisper(app, iquery):
       results=[
        InlineQueryResultArticle(
           title=f"📪 چرپەنامەیەكت نارد بۆ {username}",
-          url="http://t.me/IQ7amo",
+          url="http://t.me/MGIMT",
           input_message_content=InputTextMessageContent(
             message_text=text,
             parse_mode=enums.ParseMode.MARKDOWN 
