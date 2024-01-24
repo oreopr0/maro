@@ -119,16 +119,16 @@ async def greet_group(_, member: ChatMemberUpdated):
         )
     except AttributeError:
         pic = "DAXXMUSIC/assets/upic.png"
-    if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
+    if (temp.MELCOW).get(f"**بەخێربێی -{member.chat.id} **") is not None:
         try:
-            await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
+            await temp.MELCOW[f"**بەخێربێی -{member.chat.id}**"].delete()
         except Exception as e:
             LOGGER.error(e)
     try:
         welcomeimg = welcomepic(
             pic, user.first_name, member.chat.title, user.id, user.username
         )
-        temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
+        temp.MELCOW[f"**بەخێربێی -{member.chat.id}**"] = await app.send_photo(
             member.chat.id,
             photo=welcomeimg,
             caption=f"""
@@ -139,7 +139,7 @@ async def greet_group(_, member: ChatMemberUpdated):
 یوزەر ✧ @{user.username}
 ➖➖➖➖➖➖➖➖➖➖➖➖**
 """,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ زیادم بکە بۆ گرووپت ⦿", url=f"https://t.me/IQMCBOT?startgroup=true")]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ زیادم بکە بۆ کەناڵت ⦿", url=f"https://t.me/IQMCBOT?startchannel=true")]])
         )
     except Exception as e:
         LOGGER.error(e)
