@@ -3,10 +3,7 @@ from DAXXMUSIC import app
 from strings.filters import command
 from pyrogram import filters
 from pyrogram import Client
-import string_utils
-import time
-import csv
-import json
+
 
 
 @app.on_message(filters.regex("^بڵێ|^بلی") & filters.group)
@@ -20,16 +17,3 @@ async def say(app, message):
         return await message.reply(txt)
 
 
-@app.on_message(command(["دل","dl","dll","دڵ"]))
-async def haert(app, msg):
-    for i in range(45):
-        await msg.edit(string_utils.shuffle("🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔❤️‍🔥❤️‍🩹❣💕💞💓💗💖💘💝♥️‍"))
-        time.sleep(0.1)
-
-
-@app.on_message(command(["دلی","dlly","dli","دڵی"]))
-async def haerts(app, msg):
-    for i in range(45):
-        await msg.edit(string_utils.shuffle(
-            "🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔❤️‍🔥❤️‍🩹❣💕💞💓💗💖💘💝♥️🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔❤️‍🔥❤️‍🩹❣💕💞💓💗💖💘💝♥️🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔❤️‍🔥❤️‍🩹❣💕💞💓💗💖💘💝♥️‍"))
-        time.sleep(0.1)
