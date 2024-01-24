@@ -37,7 +37,7 @@ async def whisper(app, iquery):
     else:
       get = await app.get_chat(user)
       user = get.id
-      username = get.user.mention
+      username = get.first_name
       text = f"**🔒تۆ چرپەیەکت نارد بۆ ( {username} )\nتەنیا ئەو دەتوانێت بیکاتەوە🌚🖤**"
     send = await app.send_message(LOG, query)
     reply_markup = InlineKeyboardMarkup(
