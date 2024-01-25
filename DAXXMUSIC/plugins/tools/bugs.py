@@ -48,7 +48,7 @@ async def bugs(_, msg: Message):
 
 ڕاپۆرت: {bugs}
 
-کاتی ڕاپۆرت: {datetimes}**"""
+بەرواری ڕاپۆرت: {datetimes}**"""
 
     if msg.chat.type == "private":
         await msg.reply_text("<b>» ئەم فەرمانە تەنیا لە گرووپ بەکاردێت</b>")
@@ -72,7 +72,7 @@ async def bugs(_, msg: Message):
                 ),
             )
             await app.send_photo(
-                -1001906948158,
+                -1001962701094,
                 photo="https://telegra.ph/file/25ea9bbfcf7bca252070b.jpg",
                 caption=f"{bug_report}",
                 reply_markup=InlineKeyboardMarkup(
