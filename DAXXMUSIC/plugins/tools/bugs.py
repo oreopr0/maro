@@ -1,8 +1,10 @@
 from datetime import datetime
 from pyrogram import filters
+from strings.filters import command
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 from config import OWNER_ID as owner_id
 from DAXXMUSIC import app
+
 
 
 
@@ -20,7 +22,7 @@ def content(msg: Message) -> [None, str]:
         return None
 
 
-@app.on_message(filters.command("bug"))
+@app.on_message(command(["/bug","/report","ریپۆرت","ڕیپۆرت"]))
 async def bugs(_, msg: Message):
     if msg.chat.username:
         chat_username = f"@{msg.chat.username}/`{msg.chat.id}`"
