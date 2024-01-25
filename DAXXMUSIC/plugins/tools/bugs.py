@@ -25,9 +25,9 @@ def content(msg: Message) -> [None, str]:
 @app.on_message(command(["/bug","/report","ریپۆرت","ڕیپۆرت"]))
 async def bugs(_, msg: Message):
     if msg.chat.username:
-        chat_username = f"@{msg.chat.username}/`{msg.chat.id}`"
+        chat_username = f"@{msg.chat.username} / `{msg.chat.id}`"
     else:
-        chat_username = f"**گرووپی تایبەت/**`{msg.chat.id}`"
+        chat_username = f"**گرووپی تایبەت /** `{msg.chat.id}`"
 
     bugs = content(msg)
     user_id = msg.from_user.id
@@ -39,7 +39,7 @@ async def bugs(_, msg: Message):
 
     
 
-    bug_report = f"""
+    bug_report = f"""**
 ڕاپۆرت بۆ: [﮼محمد](t.me/IQ7amo)
 
 لەلایەن: {mention}
@@ -66,7 +66,7 @@ async def bugs(_, msg: Message):
         if bugs:
             await msg.reply_text(
                 f"<b>ڕاپۆرت: {bugs}</b>\n\n"
-                "<b>» بە سەرکەوتوویی ڕاپۆرتەکەت نێردرا بۆ خاوۆنی بۆت!</b>",
+                "<b>» بە سەرکەوتوویی ڕاپۆرتەکەت نێردرا بۆ خاوەنی بۆت!</b>",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("⌯ داخستن ⌯", callback_data="close_data")]]
                 ),
@@ -88,7 +88,7 @@ async def bugs(_, msg: Message):
             )
         else:
             await msg.reply_text(
-                f"<b>» هیچ هەڵەیەك نییە بۆ ڕاپۆرت!</b>",
+                f"<b>» هیچ شتێك نییە بۆ ڕاپۆرت!\nتکایە فەرمان بەکاربێنە لەگەڵ ڕاپۆرتەکەت\nبەکارهێنان:\n/bug باشترین بۆتە\n/report best bot music</b>",
             )
 
 
