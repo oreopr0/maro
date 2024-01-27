@@ -3,8 +3,7 @@ from DAXXMUSIC import app
 import requests
 
 
-# noinspection PyBroadException
-@app.on_message(filters.text & filters.private)
+@app.on_message(filters.regex("^https://vm.tiktok.com$"))
 async def Start(app, message):
     try:
         msg = message.text
@@ -21,9 +20,8 @@ async def Start(app, message):
         com = url['data']['comment_count']
         wat = url['data']['play_count']
         await app.send_photo(message.chat.id, ava,
-                             caption=f'**✧ ¦ ناو : {name}\n✧ ¦ وڵات : {region}\n\n✧ ¦ ژمارەی بینەر : {wat}\n✧ ¦ ژمارەی کۆمێنت : {com}\n✧ ¦ ژمارەی شەیرەکان : {sh}\n✧ ¦ درێژی ڤیدیۆ : {time}**',
+                            caption=f'**✧ ¦ ناو : {name}\n✧ ¦ وڵات : {region}\n\n✧ ¦ ژمارەی بینەر : {wat}\n✧ ¦ ژمارەی کۆمێنت : {com}\n✧ ¦ ژمارەی شەیرەکان : {sh}\n✧ ¦ درێژی ڤیدیۆ : {time}**',
                              )
         await app.send_video(message.chat.id, vid, caption=f"{tit}")
 
-    except:
-        pass
+    except:pass
