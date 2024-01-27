@@ -1,6 +1,6 @@
 import requests
 import telebot
-
+from DAXXMUSIC import app as bot 
 
 
 @bot.message_handler(regexp='https://vm.tiktok.com')
