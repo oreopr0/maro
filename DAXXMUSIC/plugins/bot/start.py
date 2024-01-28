@@ -48,7 +48,10 @@ IQ_VIDS = [
 "https://telegra.ph/file/96b75e112896a00c47203.mp4",
 "https://telegra.ph/file/f35b4a68ec793efe46c7c.mp4",
 "https://graph.org/file/d55b419cf02dfcdd5a2b8.mp4",
-"https://graph.org/file/cfa01d6254cfa3b6fd945.mp4"
+"https://graph.org/file/cfa01d6254cfa3b6fd945.mp4",
+"https://telegra.ph/file/b61c1ce580957e936d8fb.mp4",
+"https://telegra.ph/file/f2aec19f7387741798fa8.mp4",
+"https://telegra.ph/file/e13f1c42b949221f87e77.mp4"
 
 ]
 
@@ -168,8 +171,8 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(message.chat.id)
 
                 out = start_panel(_)
-                await message.reply_photo(
-                    random.choice(IQ_PICS),
+                await message.reply_video(
+                    random.choice(IQ_VIDS),
                     caption=_["start_3"].format(
                         message.from_user.mention,
                         app.mention,
