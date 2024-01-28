@@ -27,22 +27,30 @@ from strings import get_string
 
 
 
-YUMI_PICS = [
-"https://telegra.ph/file/2e85d11aefdf6cd01301b.jpg",
-"https://telegra.ph/file/0a08b180583f13952336a.jpg",
-"https://telegra.ph/file/ace92d59d19127d2d4e89.jpg",
-"https://telegra.ph/file/bb0a28259990c6a978985.jpg",
-"https://telegra.ph/file/ace92d59d19127d2d4e89.jpg",
-"https://telegra.ph/file/a0db46dfacd94e489117b.jpg",
-"https://telegra.ph/file/cd77be2595cdc2fca60a3.jpg",
-"https://telegra.ph/file/632724b3d30c691247c77.jpg",
-"https://telegra.ph/file/a2d01afe4f2cb1d4b650c.jpg",
-"https://telegra.ph/file/94dc035df11dfb159b999.jpg",
-"https://telegra.ph/file/fed9a5b1cbaaefc3a818c.jpg",
-"https://telegra.ph/file/66fd03632cbb38bdb4193.jpg"
+IQ_PICS = [
+"https://graph.org/file/9340f44e4a181b18ac663.jpg",
+"https://graph.org/file/50037e072302b4eff55ba.jpg",
+"https://graph.org/file/39f39cf6c6c68170f6bf2.jpg",
+"https://graph.org/file/abf9931642773bc27ad7f.jpg",
+"https://graph.org/file/60764ec9d2b1fda50c2d1.jpg",
+"https://graph.org/file/a90c116b776c90d58f5e8.jpg",
+"https://graph.org/file/b2822e1b60e62caa43ceb.jpg",
+"https://graph.org/file/84998ca9871e231df0897.jpg",
+"https://graph.org/file/6c5493fd2f6c403486450.jpg",
+"https://graph.org/file/9dd91a4a794f15e5dadb3.jpg",
+"https://graph.org/file/0a2fb6e502f6c9b6a04ac.jpg",
+"https://graph.org/file/774380facd73524f27d26.jpg"
 
 ]
 
+IQ_VIDS = [
+"https://telegra.ph/file/79055663111eaa8824b26.mp4",
+"https://telegra.ph/file/96b75e112896a00c47203.mp4",
+"https://telegra.ph/file/f35b4a68ec793efe46c7c.mp4",
+"https://graph.org/file/d55b419cf02dfcdd5a2b8.mp4",
+"https://graph.org/file/cfa01d6254cfa3b6fd945.mp4"
+
+]
 
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
@@ -54,7 +62,7 @@ async def start_pm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_photo(
-                random.choice(YUMI_PICS),
+                random.choice(IQ_PICS),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
             )
@@ -109,7 +117,7 @@ async def start_pm(client, message: Message, _):
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_photo(
-            random.choice(YUMI_PICS),
+            random.choice(IQ_PICS),
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),
             reply_markup=InlineKeyboardMarkup(out),
         )
@@ -125,8 +133,8 @@ async def start_pm(client, message: Message, _):
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
-    await message.reply_photo(
-        random.choice(YUMI_PICS),
+    await message.reply_video(
+        random.choice(IQ_VIDS),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
@@ -161,7 +169,7 @@ async def welcome(client, message: Message):
 
                 out = start_panel(_)
                 await message.reply_photo(
-                    random.choice(YUMI_PICS),
+                    random.choice(IQ_PICS),
                     caption=_["start_3"].format(
                         message.from_user.mention,
                         app.mention,
