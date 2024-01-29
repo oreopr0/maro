@@ -1,16 +1,16 @@
 import asyncio
 from DAXXMUSIC import app
 from pyrogram import filters
-
+from strings.filters import command
 
 SPAM_CHATS = []
 
 
-@app.on_message(filters.command(["mantion", "all"]) | filters.command("@all", "") & filters.group)
+@app.on_message(command(["/mantion", "/all"]) | command("@all", "تاگ") & filters.group)
 async def tag_all_users(_,message): 
     replied = message.reply_to_message  
     if len(message.command) < 2 and not replied:
-        await message.reply_text("**ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ**") 
+        await message.reply_text("**ڕیپلەی نامەیە یان شتێ بکە یان لەگەڵ فەرمان نامەیە بنووسە**") 
         return                  
     if replied:
         SPAM_CHATS.append(message.chat.id)      
@@ -51,7 +51,7 @@ async def tag_all_users(_,message):
         except Exception:
             pass        
            
-@app.on_message(filters.command("mantionoff") & ~filters.private)
+@app.on_message(command(["/cancel","وەستانی تاگ"]) & ~filters.private)
 async def cancelcmd(_, message):
     chat_id = message.chat.id
     if chat_id in SPAM_CHATS:
