@@ -14,7 +14,7 @@ from pyrogram.types import InlineKeyboardButton
 from DAXXMUSIC import app
 import config
 from config import BANNED_USERS
-from config.config import OWNER_ID
+from config import OWNER_ID
 from DAXXMUSIC import Telegram, YouTube, app
 from DAXXMUSIC.misc import SUDOERS
 from DAXXMUSIC.plugins.sudo.sudoers import sudoers_list
