@@ -222,7 +222,7 @@ REPLY_MESSAGE_BUTTONSS = [
              ("ڕێگای گرێدانی کەناڵ")            
           ],
           [
-             ("")
+             ("گەڕانەوە")
           ],
           [
             ("لادانی دووگمە")
@@ -241,7 +241,7 @@ async def com(_, message: Message):
 
 
 
-@app.on_message(filters.group & command(""))
+@app.on_message(filters.group & command("گەڕانەوە"))
 async def bask(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True)
