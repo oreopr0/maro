@@ -16,12 +16,12 @@ from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 @app.on_message(command(["سلاو","slaw","سڵاو","سلام"]))
 async def khalid(client: Client, message: Message):
     user = message.from_user.mention
-    await message.reply_text(f"""**بەخێربێی {user} !\n• دوگمە دابگرە بۆ بینینی فەرمانەکانی ئەلینا**""",
+    await message.reply_text(f"""**بەخێربێی  {user} !\n\n• دوگمە دابگرە بۆ بینینی فەرمانەکانی ئەلینا**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "فەرمانەکان", callback_data=f"am"),
+                        "𝖠𝗅𝗂𝗇𝖺", callback_data=f"am"),
                 ],
             ]
         ),
@@ -156,12 +156,12 @@ async def cpanel(_, message: Message):
               reply_markup=reply_markup
         )
 
-@app.on_message(filters.regex("لادانی دووگمە") & filters.group)
+@app.on_message(filters.regex("لادانی دووگمە"))
 async def down(client, message):
           m = await message.reply("**• بە سەرکەوتوویی دووگمە لادرا\n• ئەگەر دەتەوێت جارێکی تر بیبینیتەوە بنووسە ئەلینا**", reply_markup= ReplyKeyboardRemove(selective=True))
 
 
-@app.on_message(filters.group & command("چۆن ئەلینا بەکاربێنم"))
+@app.on_message(command("چۆن ئەلینا بەکاربێنم"))
 async def addbot(client: Client, message: Message):
     await message.reply_text(f"""**• بەخێربێی ئەزیزم بۆ چالاکردنی ئەلینا بە چەند هەنگاوێکە
 1 • زیادی بکە و بیکە ئەدمین بە هەموو ڕۆڵەکان
@@ -232,7 +232,7 @@ REPLY_MESSAGE_BUTTONSS = [
 ]
 
   
-@app.on_message(filters.group & command("فەرمانی ئەلینا"))
+@app.on_message(command("فەرمانی ئەلینا"))
 async def com(_, message: Message):             
         text = REPLY_MESSAGEE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONSS, resize_keyboard=True, selective=True)
@@ -243,7 +243,7 @@ async def com(_, message: Message):
 
 
 
-@app.on_message(filters.group & command("گەڕانەوە"))
+@app.on_message(command("گەڕانەوە"))
 async def bask(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True)
@@ -253,7 +253,7 @@ async def bask(_, message: Message):
         )
 
 
-@app.on_message(filters.group & command("فێرکاری پەخشکردن لە پلاتفۆڕمەکان"))
+@app.on_message(command("فێرکاری پەخشکردن لە پلاتفۆڕمەکان"))
 async def mnsat(client: Client, message: Message):
     await message.reply_text(f"""**✧ بەخێربێن بۆ بەشی پەخشکردنی پلاتفۆڕمەکان\n- پشتگیری لە پلاتفۆڕمەکان ↓\n\n• 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆\n• 𝖸𝗈𝗎𝖳𝗎𝖻𝖾\n• 𝖲𝗈𝗎𝗇𝖽𝖢𝗅𝗈𝗎𝖽\n• 𝖠𝗉𝗉𝗅𝖾𝖬𝗎𝗌𝗂𝖼\n• 𝖲𝗉𝗈𝗍𝗂𝖿𝗒\n\n• [𝑴𝒖𝒉𝒂𝒎𝒎𝒆𝒅](t.me/IQ7amo) لە هەبوونی هەر کێشەیەك پەیوەندی بە خاوۆنی بۆت بکە\n• [𝑺𝒐𝒖𝒓𝒄𝒆 𝑨𝒍𝒊𝒏𝒂](t.me/MGIMT)**""",
         reply_markup=InlineKeyboardMarkup(
@@ -269,7 +269,7 @@ async def mnsat(client: Client, message: Message):
         disable_web_page_preview=True
     )
 
-@app.on_message(filters.group & command("فەرمانی گرووپ"))
+@app.on_message(command("فەرمانی گرووپ"))
 async def laksk(client: Client, message: Message):
     await message.reply_text(f"""\n\n**╭── • [𝗔𝗹𝗶𝗻𝗮 𝗠𝘂𝘀𝗶𝗰](t.me/MGIMT) • ──╮**\n\n **✧ فەرمانی پەخشکردن لە گرووپ**\n\n**• پلەی + ناوی گۆرانی یان ڕیپلەی لینك** \n-› بۆ پەخشکردنی گۆرانی لە گرووپ\n\n• **وەستان** یان **ڕاگرتن**\n-› بۆ وەستاندنی پەخشکردن\n\n• **سکیپ** یان **دواتر**\n-› بۆ گۆڕینی گۆرانی دواتر\n\n• **وەستانی کاتی** یان **وسبە**\n-› بۆ وەستاندنی پەخشکردن بۆ ماوەیەکی کاتی\n\n• **د** یان **دەستپێکردنەوە**\n-› بۆ دەستپێکردنەوەی پەخشکردن کاتێ وەستاوە\n\n**╰── • [𝗔𝗹𝗶𝗻𝗮 𝗠𝘂𝘀𝗶𝗰](t.me/MGIMT) • ──╯**""",
         reply_markup=InlineKeyboardMarkup(
@@ -287,7 +287,7 @@ async def laksk(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.group & command("فەرمانی کەناڵ"))
+@app.on_message(command("فەرمانی کەناڵ"))
 async def channvom(client: Client, message: Message):
     await message.reply_text(f"""\n\n\n**╭── • [𝗔𝗹𝗶𝗻𝗮 𝗠𝘂𝘀𝗶𝗰](t.me/MGIMT) • ──╮**\n\n** ✧ فەرمانی پەخشکردن لە کەناڵ**\n\n**• پ کەناڵ + ناوی گۆرانی یان ڕیپلەی لینك** \n-› بۆ پەخشکردنی گۆرانی لە کەناڵ\n\n**• وەستان**\n-› بۆ وەستانی هەموو گۆرانیەکان کۆتایی هاتن\n\n**• دواتر**\n-› بۆ گۆڕینی گۆرانی بۆ گۆرانی دواتر\n\n**• وەستانی کاتی**\n-› بۆ وەستانی پەخشکردن بۆ ماوەیەکی کاتی\n\n**• دەستپێکردنەوە**\n-› بۆ دەستپێکردنەوەی پەخشکردن کاتێ وەستاوە\n\n**╰── • [𝗔𝗹𝗶𝗻𝗮 𝗠𝘂𝘀𝗶𝗰](t.me/MGIMT) • ──╯**""",
         reply_markup=InlineKeyboardMarkup(
@@ -306,7 +306,7 @@ async def channvom(client: Client, message: Message):
 
 
 
-@app.on_message(filters.group & command("ڕێگای گەڕان"))
+@app.on_message(command("ڕێگای گەڕان"))
 async def dowmmr(client: Client, message: Message):
     await message.reply_text(f"""**بەخێربێن بۆ بەشی داگرتن ♪\nبۆ گەڕانی گۆرانی یان ڤیدیۆ و داگرتنی ↓\n\n[ گەڕان + ناوی گۆرانی ..]\n\nنموونە -› گەڕان قادر کابان فریشتە**""",
         reply_markup=InlineKeyboardMarkup(
@@ -324,7 +324,7 @@ async def dowmmr(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.group & command("ڕێگای گرێدانی کەناڵ"))
+@app.on_message(command("ڕێگای گرێدانی کەناڵ"))
 async def dowhmo(client: Client, message: Message):
     await message.reply_text("""**✧ بەخێربێن بۆ فەرمانی بۆتی ئەلینا**\n**◌پەخشکردن لە کەناڵ چەند هەنگاوێکی پێویستە◌ :**\n\n1 -› بۆت زیادبکە کەناڵ و بیکە بە ئەدمین\n2 -› بگەڕێوە گرووپ و بنووسە { **گرێدان + یوزەری کەناڵ** }\n3 -› **دەست بدە لە فەرمانی پەخشکردن بۆ زانینی پەخشکردن**\n\n**✶ پەیوەندی کردن - @IQ7amo**""",
         reply_markup=InlineKeyboardMarkup(
