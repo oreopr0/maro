@@ -6,38 +6,6 @@ from DAXXMUSIC import app, Telegram
 import random
 
 
-@app.on_message(
-    command(["فەرمان"])
-)
-async def huhh(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/bd98a0645138a96e63b23.jpg",
-        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - فەرمانی بۆتی گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n**••┉┉┉┉┉┉••🝢••┉┉┉┉┉┉••**\n
-**⎙ بۆ پەخشکردن :(gorani,play,پلەی) + ناوی گۆرانی **
-**⎙ بۆ وەستاندنی کاتی پەخشکردن :(وەستانی کاتی,وسبە,pause) **
-**⎙ بۆ دەستپێکردنەوەی پەخشکردن :(دەستپێکردنەوە,د,resume) **      
-**⎙ بۆ کۆتایی هێنان بە پەخشکردن :(end,stop,ڕاگرتن,وەستان) **  
-**⎙ بۆ تێپەڕاندنی گۆرانی بۆ گۆرانی دواتر :(skip,تێپەڕاندن,دواتر)**
-**⎙ بۆ دەرکردنی یاریدەدەر :(left,جێهێشتن,پەیوەندیەکان جێبهێڵە)**
-**⎙ فەرمانە کوردیەکانی بۆت :(فەرمان)**
-**⎙ بۆ داگرتنی گۆرانی :(گۆرانی,ڤیدیۆ,میوزیک,vsong)**
-**⎙ بۆ گەڕان بە دوای هەر شتێك کەتۆ بتەوێت :(گەڕان) **
-\n••┉┉┉┉┉••🝢••┉┉┉┉┉••""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                         "𐇮 ﮼ﺣ‌ّــەمــە 🇧🇷 𐇮", url=f"https://t.me/IQ7amo"),
-                  ],[
-                        InlineKeyboardButton(
-                         "𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌", url=f"t.me/MGIMT"),
-                ],
-
-            ]
-
-        ),
-
-    )
 
 @app.on_message(
     command(["گۆرانی"])
