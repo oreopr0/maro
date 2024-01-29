@@ -15,7 +15,7 @@ from random import  choice, randint
 
                 
 @app.on_message(
-    command(["/source", "سەرچاوە", "سۆرس", "گەشەپێدەران"])
+    command(["/source", "سۆرس", "گەشەپێدەران"])
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
@@ -58,7 +58,7 @@ async def huhh(client: Client, message: Message):
 
 
 @app.on_message(
-    command(["@VTVIT", "گەشەپێدەر"])
+    command(["@VTVIT"])
  
 )
 async def yas(client, message):
