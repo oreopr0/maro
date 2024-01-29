@@ -7,7 +7,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
                             InlineKeyboardMarkup, Message)
 
-from YukkiMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
 
