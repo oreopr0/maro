@@ -1,14 +1,14 @@
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
-
+from strings.filters import command
 from DAXXMUSIC import app
 from DAXXMUSIC.utils.database import set_cmode
 from DAXXMUSIC.utils.decorators.admins import AdminActual
 from config import BANNED_USERS
 
 
-@app.on_message(filters.command(["channelplay"]) & filters.group & ~BANNED_USERS)
+@app.on_message(command(["channelplay", "گرێدان", "گریدان"]) & filters.group & ~BANNED_USERS)
 @AdminActual
 async def playmode_(client, message: Message, _):
     if len(message.command) < 2:
