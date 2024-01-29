@@ -45,6 +45,7 @@ from config import BANNED_USERS, lyrical
             "پ کەناڵ",
             "gorani",
             "ڤیدیو",
+            "ئەلینا",
             "سوڕەتی",
             "سورەتی",
             "سورەت",
