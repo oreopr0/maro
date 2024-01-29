@@ -14,7 +14,6 @@ from DAXXMUSIC import app
 import config
 from config import BANNED_USERS
 from config.config import OWNER_ID
-from strings import get_command, get_string
 from DAXXMUSIC import Telegram, YouTube, app
 from DAXXMUSIC.misc import SUDOERS
 from DAXXMUSIC.plugins.sudo.sudoers import sudoers_list
