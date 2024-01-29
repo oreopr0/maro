@@ -12,6 +12,10 @@ from strings.filters import command
 from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from DAXXMUSIC import app
 from random import  choice, randint
+from asyncio import gather
+from pyrogram.errors import FloodWait
+from pyrogram.enums import ParseMode, ChatMemberStatus
+
 
                 
 @app.on_message(
@@ -201,3 +205,59 @@ async def huhh(client: Client, message: Message):
     )
 
     
+@app.on_message(command(["سەرۆکی گرووپ"]) & filters.group)
+async def gak_owne(client: Client, message: Message):
+      if len(message.command) >= 2:
+         return 
+      else:
+            chat_id = message.chat.id
+          
+            async for member in client.get_chat_members(chat_id):
+               if member.status == ChatMemberStatus.OWNER:
+                 id = member.user.id
+                 key = InlineKeyboardMarkup([[InlineKeyboardButton(member.user.first_name, user_id=id)]])
+                 m = await client.get_chat(id)
+                 if m.photo:
+                       photo = await app.download_media(m.photo.big_file_id)
+                       return await message.reply_photo(photo, caption=f"**✧ ¦زانیاری خاوەن گرووپ \n\n ✧ ¦ ناو ← {m.first_name} \n ✧ ¦ یوزەر ← @{m.username} \n ✧ ¦ بایۆ ← {m.bio}**",reply_markup=key)
+                 else:
+                    return await message.reply("•" + member.user.mention)
+                       
+                    
+                    
+@app.on_message(command(["گرووپ", "group"]) & filters.group)
+async def ginnj(client: Client, message: Message):
+    chat_idd = message.chat.id
+    chat_name = message.chat.title
+    chat_username = f"@{message.chat.username}"
+    photo = await client.download_media(message.chat.photo.big_file_id)
+    await message.reply_photo(photo=photo, caption=f"""**🦩 ¦ ꪀᥲ️ꪔᥱ » {chat_name}\n🐉 ¦ Ꭵժ ᘜᖇ᥆υρ »  -{chat_idd}\n🐊 ¦ ᥣᎥꪀk » {chat_username}**""",     
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        chat_name, url=f"https://t.me/{message.chat.username}")
+                ],
+            ]
+        ),
+    )
+    
+
+@app.on_message(command(["گۆڕین","گۆڕینی ستیکەر"]))
+async def sticker_image(client: Client, message: Message):
+    reply = message.reply_to_message
+    if not reply:
+        return await message.reply("**ڕپلەی ستیکەر بکە**")
+    if not reply.sticker:
+        return await message.reply("**ڕپلەی ستیکەر بکە**")
+    m = await message.reply("**کەمێك چاوەڕێبە . .**")
+    f = await reply.download(f"{reply.sticker.file_unique_id}.png")
+    await gather(*[message.reply_photo(f),message.reply_document(f)])
+    await m.delete()
+    os.remove(f)
+      
+   
+@app.on_message(command(["ناوم","ناو"]) & filters.group )
+async def vgdg(client: Client, message: Message):
+    await message.reply_text(
+        f"""•⎆┊** ناوت 🔥♥**»»  {message.from_user.mention()}""") 
