@@ -13,7 +13,6 @@ from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 
 @app.on_message(
     command(["ف ئەلینا","فەرمان"])
-    & filters.group
     & ~BANNED_USERS
 )
 async def khalid(client: Client, message: Message):
