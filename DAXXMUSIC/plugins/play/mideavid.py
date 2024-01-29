@@ -18,12 +18,6 @@ from DAXXMUSIC import Telegram, YouTube, app
 from DAXXMUSIC.misc import SUDOERS
 from DAXXMUSIC.plugins.sudo.sudoers import sudoers_list
 from DAXXMUSIC import check_client
-from DAXXMUSIC.utils.database import (add_served_chat,
-                                       add_served_user,
-                                       blacklisted_chats,
-                                       get_assistant, get_lang,
-                                       get_userss, is_on_off,
-                                       is_served_private_chat)
 from DAXXMUSIC.utils.decorators.language import LanguageStart
 from DAXXMUSIC.utils.inline import (help_pannel, private_panel,
                                      start_pannel)
