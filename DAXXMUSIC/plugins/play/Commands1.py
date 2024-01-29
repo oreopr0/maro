@@ -17,10 +17,6 @@ from config import BANNED_USERS
 from config import OWNER_ID
 from DAXXMUSIC import Telegram, YouTube, app
 from DAXXMUSIC.misc import SUDOERS
-from DAXXMUSIC.plugins.sudo.sudoers import sudoers_list
-from DAXXMUSIC.utils.decorators.language import LanguageStart
-from DAXXMUSIC.utils.inline import (help_pannel, private_panel,
-                                     start_pannel)
 
 from DAXXMUSIC import check_client
 
