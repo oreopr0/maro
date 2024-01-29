@@ -210,7 +210,7 @@ async def sound(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaPhoto(
-           "https://telegra.ph/file/5306c1c651eb877f67c48.jpg",
+           "https://graph.org/file/3cd7d168316e95c6dbfbd.jpg",
            "**✧ بەخێربێن بۆ فەرمانی خزمەتگوزاری بۆتی ئەلینا\n- هەبوونی کۆمەڵێ فەرمانی جوان ↓\n\n-› گۆرانی\n-› وێنەی کچان\n-› ڤیدیۆ\n-› ق\n -› وەسف\n-› وتە\n-› کەپڵ\n\n✶ جۆینی کەناڵ بکە بۆ بینینی وتە و پۆستی شاز\n-› @EHS4SS**"
       ),
        reply_markup=InlineKeyboardMarkup(
