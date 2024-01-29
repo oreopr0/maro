@@ -446,7 +446,6 @@ class Call(PyTgCalls):
                     if str(streamtype) == "video"
                     else MediaStream(videoid, audio_parameters=HighQualityAudio())
                     )
-                )
                 try:
                     await client.change_stream(chat_id, stream)
                 except Exception:
