@@ -76,7 +76,7 @@ async def am(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaVideo(
-           "https://telegra.ph/file/94c43633525702295679d.mp4",None,
+           "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
            "**✧ بەخێربێن بۆ فەرمانی بۆتی ئەلینا\n\n-هەندێك دوگمە هەن بۆ فێربوون ان شاء الله\n\n• گەشەپێدەری بۆت -› @IQ7amo\n• کەناڵی بۆت -› @MGIMT**"
        ),
         reply_markup=InlineKeyboardMarkup(
@@ -118,7 +118,7 @@ async def am(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaVideo(
-           "https://telegra.ph/file/94c43633525702295679d.mp4",None,
+           "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
            "**✧ بەخێربێن بۆ فەرمانی بۆتی ئەلینا (:\n\n- فەرمانەکان بە دوگمەن فێریان بە\n\n• 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 -› [𝑴𝒖𝒉𝒂𝒎𝒎𝒆𝒅](t.me/IQ7amo)\n• 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 -› [𝑺𝒐𝒖𝒓𝒄𝒆 𝑨𝒍𝒊𝒏𝒂](t.me/MGIMT)**"
        ),
         reply_markup=InlineKeyboardMarkup(
@@ -187,8 +187,8 @@ async def sound(_, query: CallbackQuery):
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
 
     await query.edit_message_media(
-       InputMediaPhoto(
-           "https://telegra.ph/file/4f5ddfee947f57d1d85a0.jpg",
+       InputMediaVideo(
+           "https://graph.org/file/31a48bd8769b47d9b2db8.mp4",None,
            "**✧ بەخێربێن بۆ فەرمانی بۆتی ئەلینا**\n**◌پەخشکردن لە کەناڵ چەند هەنگاوێکی پێویستە◌ :**\n\n1 -› بۆت زیادبکە کەناڵ و بیکە بە ئەدمین\n2 -› بگەڕێوە گرووپ و بنووسە { **گرێدان + یوزەری کەناڵ** }\n3 -› **دەست بدە لە فەرمانی پەخشکردن بۆ زانینی پەخشکردن**\n\n**✶ پەیوەندی کردن - @IQ7amo**"
       ),
        reply_markup=InlineKeyboardMarkup(
