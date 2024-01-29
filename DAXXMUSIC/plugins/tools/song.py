@@ -22,7 +22,7 @@ from DAXXMUSIC.utils.inline.song import song_markup
 # Song Module
 
 
-@app.on_message(filters.command(["/search","گەڕان","گەران"])& ~BANNED_USERS)
+@app.on_message(command(["/song","گەڕان","گەران"])& ~BANNED_USERS)
 @language
 async def song_commad_private(client, message: Message, _):
     await message.delete()
