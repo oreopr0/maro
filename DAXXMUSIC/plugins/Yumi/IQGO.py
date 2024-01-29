@@ -1,6 +1,8 @@
 import asyncio
 from pyrogram import Client, filters
 from strings.filters import command
+from pyrogram.enums import ParseMode, ChatMemberStatus
+from config import OWNER_ID
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from DAXXMUSIC import app, Telegram
 import random
@@ -90,3 +92,61 @@ async def video(client: Client, message: Message):
             ]
        )
        )
+
+
+@app.on_message(
+    command(["ڕۆڵم"])
+    & filters.group
+)
+async def rotba(client, message):
+    dev = (OWNER_ID)
+    haya = (833360381,1818734394)
+    get = await client.get_chat_member(message.chat.id, message.from_user.id)
+    if message.from_user.id in haya:
+       rotba= "پڕۆگرامساز"
+    elif message.from_user.id in dev:
+        rotba = "خاوەنی بۆت"
+    elif get.status in [ChatMemberStatus.ADMINISTRATOR]:
+        rotba= "ئەدمین"
+    elif get.status in [ChatMemberStatus.OWNER]:
+        rotba= "سەرۆك"
+    else:
+         rotba = "ئەندام"
+    await message.reply_text(f"**ڕۆڵی تۆیە لەم گرووپە\n\nڕۆڵت ← « {rotba} »♥️**")
+       
+
+bio = []
+
+@app.on_message(
+    command(["بایۆ"])
+    & filters.group
+)
+async def idjjdd(client, message:Message):
+    if message.chat.id in bio:
+      return
+    usr = await client.get_chat(message.from_user.id)
+    await message.reply_text(f"**ئەوە بایۆیی تۆیە\n│ \n└ʙʏ: {usr.bio}**")
+
+
+@app.on_message(
+    command(["وێنەکەم"])
+    & filters.group
+)
+async def idjjdd(client, message):
+    if message.chat.id in iddof:
+      return
+    usr = await client.get_chat(message.from_user.id)
+    name = usr.first_name
+    i = ["0","10", "15","20", "25","30","35", "40","45", "50","55", "60"," 66", "70","77", "80","85", "90","99", "100","1000" ]
+    ik = random.choice(i)
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"**ڕێژەی جوانیت \n│ \n└ʙʏ: {ik} %😂❤️**", 
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        ),
+    )
