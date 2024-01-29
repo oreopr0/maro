@@ -24,7 +24,13 @@ EVALOP = list(map(int, getenv("EVALOP", "833360381 1818734394 5585879611").split
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 9999))
+
+# Duration Limit for downloading Songs in MP3 or MP4 format from bot
+SONG_DOWNLOAD_DURATION = int(
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "500")
+)  # Remember to give value in Minutes
+
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", -1001906948158))
