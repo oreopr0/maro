@@ -91,7 +91,7 @@ async def eslam(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaVideo(
-           "https://telegra.ph/file/3f991cf109e90c025f35a.mp4",None,
+           "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
            "**✧ فێرکاری پەخشکردنی ڤۆیس و گۆرانی و ڤیدیۆی تێلێگرام\n- ڕپلەی ڤۆیس یان گۆرانی یان ڤیدیۆ بکە نموونە :\n• پ ئەلینا یان پلەی\n• بە ئینگلیزی /play\n• وەڵامی ڤۆیس یان ڤیدیۆ پەخشی دەکات**"
        ),
        reply_markup=InlineKeyboardMarkup(
@@ -118,7 +118,7 @@ async def back1(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaVideo(
-           "https://telegra.ph/file/06f578ffcacbfea71ad30.mp4",None,
+           "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
            "**✧ بەخێربێن بۆ بەشی پەخشکردنی پلاتفۆڕمەکان\n- پشتگیری لە پلاتفۆڕمەکان ↓**\n\n**• Telegram\n• Youtube\n• SoundCloud\n• AppleMusic\n• Spotify\n\n- فێرکای لە دوگمەکانی خوارەوەیە**"
        ),
        reply_markup=InlineKeyboardMarkup(
@@ -161,7 +161,7 @@ async def don(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaVideo(
-           "https://telegra.ph/file/417746bcdb462a48ea974.mp4",None,
+           "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
            "**بەخێربێن بۆ بەشی داگرتن ♪\nبۆ گەڕانی گۆرانی یان ڤیدیۆ و داگرتنی ↓\n\n[ گەڕان + ناوی گۆرانی ..]\n\nنموونە -› گەڕان قادر کابان فریشتە**"
        ),
        reply_markup=InlineKeyboardMarkup(
@@ -208,7 +208,7 @@ async def donnr(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaVideo(
-           "https://telegra.ph/file/7300df6491dfcbe571680.mp4",None,
+           "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
            "**◌ بەخێربێن بۆ بەشی پەخشکردنی 𝖸𝗈𝗎𝖳𝗎𝖻𝖾\n\n• دوو ڕێگا هەیە بۆ پەخشکردن :\n\n1 - دانانی لینك لەگەڵ فەرمانی پەخشکردن\n2 - [پ ئەلینا یان پلەی] ڕێپلەی لینك بکە\n\n◌ نموونە : پ ئەلینا https://youtu.be/UuEPuVjsoG4**\n- **سەیری ڤیدیۆ بکە بۆ تێگەیشتن**"
        ),
        reply_markup=InlineKeyboardMarkup(
@@ -255,7 +255,7 @@ async def apple(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaVideo(
-           "https://telegra.ph/file/76b82a7b8df689a169182.mp4",
+           "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
            "**◌ بەخێربێن بۆ بەشی پەخشی 𝖠𝗉𝗉𝗅𝖾 𝖬𝗎𝗌𝗂𝖼 ♪\n\n• فەرمانی پەخشکردن بنووسە لەگەڵ لینکی 𝖠𝗉𝗉𝗅𝖾𝖬𝗎𝗌𝗂𝖼\n\n• نموونە :** [ `پلەی https://music.apple.com/sa/album/ipad/1616715862?i=1616715870&l=ar` ]\n\n**سەیری ڤیدیۆ بکە بۆ تێگەیشتن**"
        ),
        reply_markup=InlineKeyboardMarkup(
@@ -302,7 +302,7 @@ async def spo(_, query: CallbackQuery):
 
     await query.edit_message_media(
        InputMediaVideo(
-           "https://telegra.ph/file/bc01ebc69dc2ff1f380d9.mp4",None,
+           "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
            "**✶ بەخێربێن بۆ بەشی پەخشی 𝖲𝗉𝗈𝗍𝗂𝖿𝗒 ♪**\n\n**• فەرمانی پەخشکردن بنووسە لەگەڵ لینکی سپۆتیفای**\n\n**• نموونە :** [ `پلەی https://open.spotify.com/track/2GQB3Xe1J9D2sK90AtHfhI?si=aIuly9l-T-Gy5GvfZxpUiw&context=spotify%3Aplaylist%3A37i9dQZF1DXcJUwMZo8Ss1i=1616715870&l=ar` ]\n\n**سەیری ڤیدیۆ بکە بۆ تێگەیشتن**"
        ),
        reply_markup=InlineKeyboardMarkup(
