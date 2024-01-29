@@ -182,7 +182,7 @@ async def addbot(client: Client, message: Message):
 
 
 
-@app.on_message(filters.group & command("سەرچاوە"))
+@app.on_message(command("سەرچاوە"))
 async def addbot(client: Client, message: Message):
     await message.reply_text(f"""**• بەخێربێی ئەزیزم بۆ سەرچاوەی ئەلینا
 • تایبەتمەندی بۆت : گۆرانی، پاراستن، داگرتن، وەڵامدانەوە
