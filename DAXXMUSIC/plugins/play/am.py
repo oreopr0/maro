@@ -12,7 +12,7 @@ from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 
 
 @app.on_message(
-    command("ئەلینا")
+    command(["ف ئەلینا","فەرمان"])
     & filters.group
     & ~BANNED_USERS
 )
