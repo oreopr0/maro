@@ -14,14 +14,14 @@ import config
 from config import BANNED_USERS
 from config import OWNER_ID
 from DAXXMUSIC import Telegram, YouTube, app
-from DAXXMUSIC.misc import SUDOERS
+from DAXXMUSIC.misc import SUDOERS, BAND
 
 
 
 @app.on_callback_query(filters.regex("ddd"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
     await query.edit_message_text(
        f"""\n\n\n**╭── • [𝗔𝗹𝗶𝗻𝗮 𝗠𝘂𝘀𝗶𝗰](t.me/MGIMT) • ──╮**\n\n **✧ فەرمانی پەخشکردن لە گرووپ**\n\n**• پلەی + ناوی گۆرانی یان ڕیپلەی لینك** \n-› بۆ پەخشکردنی گۆرانی لە گرووپ\n\n• **وەستان** یان **ڕاگرتن**\n-› بۆ وەستاندنی پەخشکردن\n\n• **سکیپ** یان **دواتر**\n-› بۆ گۆڕینی گۆرانی دواتر\n\n• **وەستانی کاتی** یان **وسبە**\n-› بۆ وەستاندنی پەخشکردن بۆ ماوەیەکی کاتی\n\n• **د** یان **دەستپێکردنەوە**\n-› بۆ دەستپێکردنەوەی پەخشکردن کاتێ وەستاوە\n\n**╰── • [𝗔𝗹𝗶𝗻𝗮 𝗠𝘂𝘀𝗶𝗰](t.me/MGIMT) • ──╯""",
