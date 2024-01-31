@@ -20,7 +20,7 @@ async def khalid(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "𝖠𝗅𝗂𝗇𝖺", callback_data=f"am"),
+                        "𝖠𝗅𝗂𝗇𝖺", callback_data=f"amm"),
                 ],
             ]
         ),
