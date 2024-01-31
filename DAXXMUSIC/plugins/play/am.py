@@ -2,10 +2,8 @@ import asyncio
 from pyrogram import Client, filters
 from config import BANNED_USERS
 from strings.filters import command
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
-                            InlineKeyboardMarkup, Message)
+from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup, Message)
 
 from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
