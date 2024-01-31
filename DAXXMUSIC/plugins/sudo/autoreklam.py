@@ -21,35 +21,28 @@ MESSAGE = f"""**چەناڵێک تایبەت بە وتە و ڤیدیۆی بێ ل�
 BUTTON = reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
+                      InlineKeyboardButton(
                         "تێکستی بچووك 🫧🖤»", url=f"https://t.me/EHS4SS"),
-                    InlineKeyboardButton(
+                      InlineKeyboardButton(
                         "وتەی ئاشقانە 🫧🖤»", url=f"https://t.me/EHS4SS"),
-                 ],[
-                    
-                
-                    InlineKeyboardButton(
-                        "بۆتی گۆرانی", url=f"https://t.me/IQMCBOT"),
                 ],[
-                    
-                
-                    InlineKeyboardButton(
-                        "بۆتی جۆین", url=f"https://t.me/IQJOBOT"),
-                    InlineKeyboardButton(
-                        "جۆینی کەناڵ بکە 🫧🖤»", url=f"https://t.me/EHS4SS"),
-                
+                      InlineKeyboardButton(
+                        "جۆینی کەناڵ بکە 🫧🖤»", url=f"https://t.me/EHS4SS")
                 ],[
-                    
-                
-                    InlineKeyboardButton(
-                        "زیادم بکە گرووپت", url=f"https://t.me/{app.username}?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users"),
+                       InlineKeyboardButton(
+                          "بۆتی جۆین 🫧🖤»", url=f"https://t.me/IQJOBOT"),
+                       InlineKeyboardButton(
+                           "بۆتی گۆرانی 🫧🖤»", url=f"https://t.me/IQMCBOT"),
+                ],[
+
+                        InlineKeyboardButton(
+                        "◌sᴏᴜʀᴄᴇ ᴀʟɪɴᴀ◌", url=f"https://t.me/MGIMT"),
+
+
                 ],
-
             ]
+        )
 
-        ),
-
-    )
 
 
 async def send_message_to_chats():
