@@ -55,15 +55,15 @@ async def sudoers_list(client, message: Message):
     await message.reply_photo(photo="https://graph.org/file/3202937ba2792dfa8722f.jpg",caption="**» لیستی گەشەپێدەران ببینە بە دوگمەی خوارەوە**\n\n**» تێبینی : تەنیا گەشەپێدەرەکان دەتوانن بیبینن**",reply_markup=reply_markups)
 
 
+# noinspection PyUnreachableCode
 @app.on_callback_query(filters.regex("^check_sudo_list$"))
 async def check_sudo_list(client, callback_query: CallbackQuery):
-    keyboard = []
-    if callback_query.from_user.id not in SUDOERS:
-        return await callback_query.answer("👾 تەنیا گەشەپێدەرەکان دەتوانن بیبینن", show_alert=True)
-    else:
-        user = await app.get_users(OWNER_ID)
 
+    user_id = CallbackQuery.from_user.id
+    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
+        return
         user_mention = (user.first_name if not user.mention else user.mention)
+        keyboard = []
         caption = f"**لیستی بەڕێوبەرەکان**\n\n**🌹خاوەنی بۆت** ➥ {user_mention}\n\n"
 
         keyboard.append([InlineKeyboardButton("๏ خاوەنی بۆت ๏", url=f"tg://openmessage?user_id={OWNER_ID}")])
