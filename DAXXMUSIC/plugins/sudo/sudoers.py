@@ -52,16 +52,17 @@ async def sudoers_list(client, message: Message):
     reply_markups = InlineKeyboardMarkup(keyboard)
 
     # await message.reply_photo(photo="https://graph.org/file/3202937ba2792dfa8722f.jpg", caption="**» ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.**\n\n**» ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ. ", reply_markup=reply_markups)
-    await message.reply_photo(photo="https://graph.org/file/3202937ba2792dfa8722f.jpg",caption="**» لیستی گەشەپێدەران ببینە بە دوگمەی خوارەوە**\n\n**» تێبینی : تەنیا گەشەپێدەرەکان دەتوانن بیبینن**",reply_markup=reply_markups)
+    await message.reply_photo(photo="https://graph.org/file/3202937ba2792dfa8722f.jpg",caption="**» لیستی گەشەپێدەران ببینە بە دوگمەی خوارەوە**\n\n**» تێبینی : باندکراوەکان ناتوانن بیبینن**",reply_markup=reply_markups)
 
 
 # noinspection PyUnreachableCode
 @app.on_callback_query(filters.regex("^check_sudo_list$"))
 async def check_sudo_list(client, callback_query: CallbackQuery):
     keyboard = []
-    if callback_query.from_user.id not in SUDOERS:
+    if callback_query.from_user.id in BANNED_USERS:
+        return await callback_query.answer("تەنیا باند نەکراوەکان دەتوانن بیبینن", show_alert=True)
+        
         user_mention = (user.first_name if not user.mention else user.mention)
-        keyboard = []
         caption = f"**لیستی بەڕێوبەرەکان**\n\n**🌹خاوەنی بۆت** ➥ {user_mention}\n\n"
 
         keyboard.append([InlineKeyboardButton("๏ خاوەنی بۆت ๏", url=f"tg://openmessage?user_id={OWNER_ID}")])
@@ -73,7 +74,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
                     user = await app.get_users(user_id)
                     user_mention = user.mention if user else f"**👾 گەشەپێدەر {count} ئایدی:** {user_id}"
                     caption += f"**👾 گەشەپێدەر** {count} **»** {user_mention}\n"
-                    button_text = f"๏ گەشەپێدەران {count} ๏ "
+                    button_text = f"๏ گەشەپێدەران {count} ๏"
                     keyboard.append([InlineKeyboardButton(button_text, url=f"tg://openmessage?user_id={user_id}")]
                                     )
                     count += 1
@@ -93,5 +94,5 @@ async def back_to_main_menu(client, callback_query: CallbackQuery):
     keyboard = [[InlineKeyboardButton("๏ گەشەپێدەرەکان ๏", callback_data="check_sudo_list")]]
     reply_markupes = InlineKeyboardMarkup(keyboard)
     await callback_query.message.edit_caption(
-        caption="**» لیستی گەشەپێدەران ببینە بە دوگمەی خوارەوە**\n\n**» تێبینی : تەنیا گەشەپێدەرەکان دەتوانن بیبینن**",
+        caption="**» لیستی گەشەپێدەران ببینە بە دوگمەی خوارەوە**\n\n**» تێبینی : باندکراوەکان ناتوانن بیبینن**",
         reply_markup=reply_markupes)
