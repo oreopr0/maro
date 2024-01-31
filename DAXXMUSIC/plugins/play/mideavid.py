@@ -8,7 +8,7 @@ from typing import Union
 from pyrogram.types import InputMediaPhoto, InputMediaVideo
 from DAXXMUSIC import app
 import config
-from config import BANNED_USERS
+from config import BANNED_USERS, BAND
 from config import OWNER_ID
 from DAXXMUSIC import Telegram, YouTube, app
 from DAXXMUSIC.misc import SUDOERS
@@ -17,7 +17,7 @@ from DAXXMUSIC.misc import SUDOERS
 @app.on_callback_query(filters.regex("fft"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -46,7 +46,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("tele"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -72,7 +72,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("ko"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -114,7 +114,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("don"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -161,7 +161,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("yout"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -208,7 +208,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("apple"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -255,7 +255,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("spo"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
