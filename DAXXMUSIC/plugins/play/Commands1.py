@@ -50,13 +50,9 @@ async def dddf(_, query: CallbackQuery):
         ),
     )
 
-@app.on_callback_query(filters.regex("sop"))
-async def sop(_, query: CallbackQuery):
-
-    if not check_client._check_client(query):
-        return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
-
-    await query.edit_message_text(
+@app.on_message(command(["کەناڵ", "کەنال"]))
+def vgdg(client, message):
+    message.reply_text(
        f"""**✧ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑺𝒐𝒖𝒓𝒄𝒆 𝑨𝒍𝒊𝒏𝒂\n✧ 𝑱𝒐𝒊𝒏 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑨𝒍𝒊𝒏𝒂 𝑻𝒐 𝑺𝒆𝒆 𝑨𝒍𝒍 𝑼𝒑𝒅𝒂𝒕𝒆\n\n- 𝑴𝒂𝒔𝒕𝒆𝒓 -› @IQ7amo\n- 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 -› @MGIMT**""",
        reply_markup=InlineKeyboardMarkup(
           [
