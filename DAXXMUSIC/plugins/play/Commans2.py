@@ -12,14 +12,14 @@ import config
 from config import BANNED_USERS
 from config import OWNER_ID
 from DAXXMUSIC import Telegram, YouTube, app
-from DAXXMUSIC.misc import SUDOERS
+from DAXXMUSIC.misc import SUDOERS, BAND
 
 
 
 @app.on_callback_query(filters.regex("tt"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_text(
@@ -54,7 +54,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("am"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -96,7 +96,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("amm"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -138,7 +138,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("sound"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -165,7 +165,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("cha"))
 async def gtt(_, query: CallbackQuery):
     
-    if query.from_user.id in BANNED_USERS:
+    if query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
@@ -187,7 +187,7 @@ async def gtt(_, query: CallbackQuery):
 @app.on_callback_query(filters.regex("kdm"))
 async def gtt(_, callback_query: CallbackQuery):
     
-    if callback_query.from_user.id in BANNED_USERS:
+    if callback_query.from_user.id in BAND:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
         
     await query.edit_message_media(
