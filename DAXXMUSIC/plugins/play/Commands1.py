@@ -20,6 +20,7 @@ from DAXXMUSIC.misc import SUDOERS
 
 @app.on_callback_query(filters.regex("ddd"))
 async def dddf(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
