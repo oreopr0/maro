@@ -30,20 +30,16 @@ async def dddf(_, query: CallbackQuery):
           [
                [
                     InlineKeyboardButton(
-                        "", callback_data="fft"),
-                    InlineKeyboardButton(
-                        "", url=f"https://t.me/EHS4SS")
+                        "”﮼احساس“", url=f"https://t.me/EHS4SS")
                 ],[
                     InlineKeyboardButton(
                         "گەڕانەوە", callback_data="am"),
                     InlineKeyboardButton(
-                        "", callback_data="close"),
+                        "داخستن", callback_data="close"),
                 ],[
 
                     InlineKeyboardButton(
                         "◌sᴏᴜʀᴄᴇ ᴀʟɪɴᴀ◌", callback_data="fft"),
-                    InlineKeyboardButton(
-                        "", callback_data="am"),
 
                ],
           ]
@@ -58,20 +54,16 @@ def vgdg(client, message):
           [
                [
                     InlineKeyboardButton(
-                        "", callback_data="fft"),
+                        "◌ᴅᴇᴠᴇʟᴏᴘᴇʀ◌", url=f"t.me/IQ7amo")
+                ],[
+                    InlineKeyboardButton(
+                        "فەرمانی ئەلینا", callback_data="am"),
                     InlineKeyboardButton(
                         "”﮼احساس“", url=f"https://t.me/EHS4SS")
                 ],[
-                    InlineKeyboardButton(
-                        "◌sᴏᴜʀᴄᴇ ᴀʟɪɴᴀ◌", callback_data="am"),
-                    InlineKeyboardButton(
-                        "◌ᴅᴇᴠᴇʟᴏᴘᴇʀ◌", url=f"t.me/IQ7amo")
-                ],[
 
                     InlineKeyboardButton(
-                        "گەڕانەوە", callback_data="settings_helper"),
-                    InlineKeyboardButton(
-                        "فەرمان", callback_data="am"),
+                        "◌sᴏᴜʀᴄᴇ ᴀʟɪɴᴀ◌", callback_data="fft"),
 
                ],
           ]
