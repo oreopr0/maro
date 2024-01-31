@@ -18,6 +18,7 @@ from DAXXMUSIC.misc import SUDOERS
     
 @app.on_callback_query(filters.regex("fft"))
 async def fft(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
@@ -48,6 +49,7 @@ async def fft(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("tele"))
 async def eslam(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
@@ -75,6 +77,7 @@ async def eslam(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("ko"))
 async def back1(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
@@ -118,6 +121,7 @@ async def back1(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("don"))
 async def don(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
@@ -165,6 +169,7 @@ async def don(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("yout"))
 async def donnr(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
@@ -212,6 +217,7 @@ async def donnr(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("apple"))
 async def apple(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
@@ -259,6 +265,7 @@ async def apple(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("spo"))
 async def spo(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
