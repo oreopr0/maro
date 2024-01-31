@@ -18,6 +18,7 @@ from DAXXMUSIC.misc import SUDOERS
 
 @app.on_callback_query(filters.regex("tt"))
 async def gtt(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
@@ -55,6 +56,7 @@ async def gtt(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("am"))
 async def am(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
@@ -97,6 +99,7 @@ async def am(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("amm"))
 async def am(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
@@ -140,6 +143,7 @@ async def am(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("sound"))
 async def sound(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
@@ -167,6 +171,7 @@ async def sound(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("cha"))
 async def sound(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
@@ -190,6 +195,7 @@ async def sound(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("kdm"))
 async def sound(_, query: CallbackQuery):
+    from_user = int(data[1])
     user_id = CallbackQuery.from_user.id
     if user_id != CallbackQuery.message.reply_to_message.from_user.id:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
