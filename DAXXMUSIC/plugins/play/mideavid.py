@@ -3,12 +3,8 @@ from pyrogram import Client, filters
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
-                            InlineKeyboardMarkup, Message)
 from youtubesearchpython.__future__ import VideosSearch
 from typing import Union
-
-from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InputMediaPhoto, InputMediaVideo
 from DAXXMUSIC import app
 import config
@@ -16,7 +12,6 @@ from config import BANNED_USERS
 from config import OWNER_ID
 from DAXXMUSIC import Telegram, YouTube, app
 from DAXXMUSIC.misc import SUDOERS
-from DAXXMUSIC import check_client
 
 
 
