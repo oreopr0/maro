@@ -9,7 +9,7 @@ from DAXXMUSIC.utils.database import add_sudo, remove_sudo
 from DAXXMUSIC.utils.decorators.language import language
 from DAXXMUSIC.utils.extraction import extract_user
 from DAXXMUSIC.utils.inline import close_markup
-from config import BANNED_USERS, OWNER_ID
+from config import BANNED_USERS, OWNER_ID, BAND
 
 
 @app.on_message(filters.command(["addsudo", "زیادکردنی گەشەپێدەر"],prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & filters.user(OWNER_ID))
@@ -59,11 +59,13 @@ async def sudoers_list(client, message: Message):
 @app.on_callback_query(filters.regex("^check_sudo_list$"))
 async def check_sudo_list(client, callback_query: CallbackQuery):
     keyboard = []
-    if callback_query.from_user.id in BANNED_USERS:
-        return await callback_query.answer("تەنیا باند نەکراوەکان دەتوانن بیبینن", show_alert=True)
-        
+    if callback_query.from_user.id in BAND:
+        return await callback_query.answer("تەنیا باند نەکراوەکان دەتوانن بیبینن🖕😎😂", show_alert=True)
+    else:
+        user = await app.get_users(1602355282)
+
         user_mention = (user.first_name if not user.mention else user.mention)
-        caption = f"**لیستی بەڕێوبەرەکان**\n\n**🌹خاوەنی بۆت** ➥ {user_mention}\n\n"
+        caption = f"**لیستی بەڕێوبەرەکان**\n\n**🌹خاوەنی بۆت ➥ {user_mention}\n\n**"
 
         keyboard.append([InlineKeyboardButton("๏ خاوەنی بۆت ๏", url=f"tg://openmessage?user_id={OWNER_ID}")])
 
