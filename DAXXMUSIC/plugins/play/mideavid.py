@@ -1,7 +1,7 @@
 import asyncio
 from pyrogram import Client, filters
 from strings.filters import command
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import (Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery)
 from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from youtubesearchpython.__future__ import VideosSearch
 from typing import Union
