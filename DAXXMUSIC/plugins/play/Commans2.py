@@ -30,7 +30,7 @@ async def gtt(_, query: CallbackQuery):
                     InlineKeyboardButton(
                         "", callback_data="fft"),
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/EHS4SS")
+                        "”﮼احساس“", url=f"https://t.me/EHS4SS")
                 ], [
                 InlineKeyboardButton(
                     "گەڕانەوە", callback_data="am"),
@@ -43,7 +43,7 @@ async def gtt(_, query: CallbackQuery):
             ], [
 
                 InlineKeyboardButton(
-                    "", callback_data=f"fft")
+                    "◌sᴏᴜʀᴄᴇ ᴀʟɪɴᴀ◌", callback_data=f"fft")
 
             ],
             ]
