@@ -17,7 +17,7 @@ async def khlop(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/EHS4SS"),
+                        "”﮼احساس“", url=f"https://t.me/EHS4SS"),
                 ],[
                     InlineKeyboardButton(
                         "فێرکاری پەخشکردن لە کەناڵ", callback_data=f"cha"),
