@@ -3,6 +3,7 @@ from pyrogram import Client, filters
 from strings.filters import command
 from DAXXMUSIC.utils.decorators import AdminActual
 from pyrogram.types import (
+    CallbackQuery,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
     ReplyKeyboardMarkup,
