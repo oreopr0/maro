@@ -60,7 +60,7 @@ def vgdg(client, message):
                     InlineKeyboardButton(
                         "", callback_data="fft"),
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/EHS4SS")
+                        "”﮼احساس“", url=f"https://t.me/EHS4SS")
                 ],[
                     InlineKeyboardButton(
                         "◌sᴏᴜʀᴄᴇ ᴀʟɪɴᴀ◌", callback_data="am"),
@@ -71,7 +71,7 @@ def vgdg(client, message):
                     InlineKeyboardButton(
                         "گەڕانەوە", callback_data="settings_helper"),
                     InlineKeyboardButton(
-                        "", callback_data="am"),
+                        "فەرمان", callback_data="am"),
 
                ],
           ]
