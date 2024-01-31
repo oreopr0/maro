@@ -14,20 +14,16 @@ from DAXXMUSIC import Telegram, YouTube, app
 from DAXXMUSIC.misc import SUDOERS
 
 
-
-    
 @app.on_callback_query(filters.regex("fft"))
-async def fft(_, query: CallbackQuery):
-    from_user = int(data[1])
-    user_id = CallbackQuery.from_user.id
-    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
+async def gtt(_, query: CallbackQuery):
+    
+    if query.from_user.id in BANNED_USERS:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
-
+        
     await query.edit_message_media(
        InputMediaPhoto(
            "https://graph.org/file/3cd7d168316e95c6dbfbd.jpg",
-           ""
-       ),
+           ""),
        reply_markup=InlineKeyboardMarkup(
           [
                [
@@ -48,17 +44,15 @@ async def fft(_, query: CallbackQuery):
     
 
 @app.on_callback_query(filters.regex("tele"))
-async def eslam(_, query: CallbackQuery):
-    from_user = int(data[1])
-    user_id = CallbackQuery.from_user.id
-    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
+async def gtt(_, query: CallbackQuery):
+    
+    if query.from_user.id in BANNED_USERS:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
-
+        
     await query.edit_message_media(
        InputMediaVideo(
            "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
-           "**✧ فێرکاری پەخشکردنی ڤۆیس و گۆرانی و ڤیدیۆی تێلێگرام\n- ڕپلەی ڤۆیس یان گۆرانی یان ڤیدیۆ بکە نموونە :\n• پ ئەلینا یان پلەی\n• بە ئینگلیزی /play\n• وەڵامی ڤۆیس یان ڤیدیۆ پەخشی دەکات**"
-       ),
+           "**✧ فێرکاری پەخشکردنی ڤۆیس و گۆرانی و ڤیدیۆی تێلێگرام\n- ڕپلەی ڤۆیس یان گۆرانی یان ڤیدیۆ بکە نموونە :\n• پ ئەلینا یان پلەی\n• بە ئینگلیزی /play\n• وەڵامی ڤۆیس یان ڤیدیۆ پەخشی دەکات**"),
        reply_markup=InlineKeyboardMarkup(
           [
                [
@@ -76,17 +70,15 @@ async def eslam(_, query: CallbackQuery):
 
 
 @app.on_callback_query(filters.regex("ko"))
-async def back1(_, query: CallbackQuery):
-    from_user = int(data[1])
-    user_id = CallbackQuery.from_user.id
-    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
+async def gtt(_, query: CallbackQuery):
+    
+    if query.from_user.id in BANNED_USERS:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
-
+        
     await query.edit_message_media(
        InputMediaVideo(
            "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
-           "**✧ بەخێربێن بۆ بەشی پەخشکردنی پلاتفۆڕمەکان\n- پشتگیری لە پلاتفۆڕمەکان ↓**\n\n**• Telegram\n• Youtube\n• SoundCloud\n• AppleMusic\n• Spotify\n\n- فێرکای لە دوگمەکانی خوارەوەیە**"
-       ),
+           "**✧ بەخێربێن بۆ بەشی پەخشکردنی پلاتفۆڕمەکان\n- پشتگیری لە پلاتفۆڕمەکان ↓**\n\n**• Telegram\n• Youtube\n• SoundCloud\n• AppleMusic\n• Spotify\n\n- فێرکای لە دوگمەکانی خوارەوەیە**"),
        reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -120,12 +112,11 @@ async def back1(_, query: CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("don"))
-async def don(_, query: CallbackQuery):
-    from_user = int(data[1])
-    user_id = CallbackQuery.from_user.id
-    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
+async def gtt(_, query: CallbackQuery):
+    
+    if query.from_user.id in BANNED_USERS:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
-
+        
     await query.edit_message_media(
        InputMediaVideo(
            "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
@@ -168,12 +159,11 @@ async def don(_, query: CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("yout"))
-async def donnr(_, query: CallbackQuery):
-    from_user = int(data[1])
-    user_id = CallbackQuery.from_user.id
-    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
+async def gtt(_, query: CallbackQuery):
+    
+    if query.from_user.id in BANNED_USERS:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
-
+        
     await query.edit_message_media(
        InputMediaVideo(
            "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
@@ -216,12 +206,11 @@ async def donnr(_, query: CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("apple"))
-async def apple(_, query: CallbackQuery):
-    from_user = int(data[1])
-    user_id = CallbackQuery.from_user.id
-    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
+async def gtt(_, query: CallbackQuery):
+    
+    if query.from_user.id in BANNED_USERS:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
-
+        
     await query.edit_message_media(
        InputMediaVideo(
            "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
@@ -264,12 +253,11 @@ async def apple(_, query: CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("spo"))
-async def spo(_, query: CallbackQuery):
-    from_user = int(data[1])
-    user_id = CallbackQuery.from_user.id
-    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
+async def gtt(_, query: CallbackQuery):
+    
+    if query.from_user.id in BANNED_USERS:
         return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
-
+        
     await query.edit_message_media(
        InputMediaVideo(
            "https://graph.org/file/0a648eba9c9163765c265.mp4",None,
