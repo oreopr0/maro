@@ -58,10 +58,8 @@ async def sudoers_list(client, message: Message):
 # noinspection PyUnreachableCode
 @app.on_callback_query(filters.regex("^check_sudo_list$"))
 async def check_sudo_list(client, callback_query: CallbackQuery):
-
-    user_id = CallbackQuery.from_user.id
-    if user_id != CallbackQuery.message.reply_to_message.from_user.id:
-        return
+    keyboard = []
+    if callback_query.from_user.id not in SUDOERS:
         user_mention = (user.first_name if not user.mention else user.mention)
         keyboard = []
         caption = f"**لیستی بەڕێوبەرەکان**\n\n**🌹خاوەنی بۆت** ➥ {user_mention}\n\n"
