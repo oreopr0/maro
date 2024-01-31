@@ -15,7 +15,7 @@ from DAXXMUSIC import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 @app.on_message(command(["سلاو","slaw","سڵاو","سلام"]))
 async def khalid(client: Client, message: Message):
     user = message.from_user.mention
-    await message.reply_text(f"""**بەخێربێی  {user} !\n\n• دوگمە دابگرە بۆ بینینی فەرمانەکانی ئەلینا**""",
+    await message.reply_text(f"""**بەخێربێی {user} سڵاو لە تۆش!\n\n• دوگمە دابگرە بۆ بینینی فەرمانەکانی ئەلینا**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
