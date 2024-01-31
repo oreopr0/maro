@@ -9,10 +9,10 @@ from typing import Union
 from pyrogram.types import InputMediaPhoto, InputMediaVideo
 from DAXXMUSIC import app
 import config
-from config import BANNED_USERS
+from config import BANNED_USERS, BAND
 from config import OWNER_ID
 from DAXXMUSIC import Telegram, YouTube, app
-from DAXXMUSIC.misc import SUDOERS, BAND
+from DAXXMUSIC.misc import SUDOERS
 
 
 
