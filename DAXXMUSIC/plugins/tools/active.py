@@ -1,7 +1,7 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from unidecode import unidecode
-
+from strings.filters import command
 from DAXXMUSIC import app
 from DAXXMUSIC.misc import SUDOERS
 from DAXXMUSIC.utils.database import (
