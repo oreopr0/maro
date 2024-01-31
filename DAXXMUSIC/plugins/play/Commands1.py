@@ -19,13 +19,10 @@ from DAXXMUSIC.misc import SUDOERS
 
 
 @app.on_callback_query(filters.regex("ddd"))
-async def dddf(_, query: CallbackQuery):
-    callback_data = CallbackQuery.data.strip()
-    callback_request = callback_data.split(None, 1)[1]
-    user_id = callback_request.split("|")
-    if CallbackQuery.from_user.id != int(user_id):
-        return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە!", show_alert=True)
-
+async def gtt(_, query: CallbackQuery):
+    
+    if query.from_user.id in BANNED_USERS:
+        return await query.answer("ببورن، داواکارییەکە بۆ ئێوە نییە !", show_alert=True)
     await query.edit_message_text(
        f"""\n\n\n**╭── • [𝗔𝗹𝗶𝗻𝗮 𝗠𝘂𝘀𝗶𝗰](t.me/MGIMT) • ──╮**\n\n **✧ فەرمانی پەخشکردن لە گرووپ**\n\n**• پلەی + ناوی گۆرانی یان ڕیپلەی لینك** \n-› بۆ پەخشکردنی گۆرانی لە گرووپ\n\n• **وەستان** یان **ڕاگرتن**\n-› بۆ وەستاندنی پەخشکردن\n\n• **سکیپ** یان **دواتر**\n-› بۆ گۆڕینی گۆرانی دواتر\n\n• **وەستانی کاتی** یان **وسبە**\n-› بۆ وەستاندنی پەخشکردن بۆ ماوەیەکی کاتی\n\n• **د** یان **دەستپێکردنەوە**\n-› بۆ دەستپێکردنەوەی پەخشکردن کاتێ وەستاوە\n\n**╰── • [𝗔𝗹𝗶𝗻𝗮 𝗠𝘂𝘀𝗶𝗰](t.me/MGIMT) • ──╯""",
        reply_markup=InlineKeyboardMarkup(
