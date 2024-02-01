@@ -2,7 +2,7 @@ import asyncio
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters, Client
-from AnonXMusic import app
+from DAXXMUSIC import app
 from config import OWNER_ID
 from DAXXMUSIC.misc import SUDOERS
 
