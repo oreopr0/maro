@@ -10,7 +10,7 @@ def help_pannel(_, START: Union[bool, int] = None):
     second = [
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
-            url=f"https://t.me/{app.username}?start=help",
+            url=f"https://t.me/{app.username}?start",
         ),
     ]
     mark = second if START else first
