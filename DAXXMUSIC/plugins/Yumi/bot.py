@@ -1,4 +1,5 @@
 import asyncio
+from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters, Client
 from AnonXMusic import app
@@ -6,7 +7,7 @@ from config import OWNER_ID
 from DAXXMUSIC.misc import SUDOERS
 
 
-@app.on_message(filters.command(['بوت', 'بۆت'], prefixes=""))
+@app.on_message(command(["bot", "بۆت", "بوت"]))
 async def Italymusic(client: Client, message: Message):
     me = await client.get_me()
     bot_username = me.username
