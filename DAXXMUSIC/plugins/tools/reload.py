@@ -29,7 +29,7 @@ rel = {}
 
 
 @app.on_message(
-    filters.command(["admincache", "reload", "refresh"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & filters.group & ~BANNED_USERS
+    filters.command(["admincache", "reload", "refresh", "ڕیلۆد"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & filters.group & ~BANNED_USERS
 )
 @language
 async def reload_admin_cache(client, message: Message, _):
@@ -128,9 +128,9 @@ async def close_menu(_, query: CallbackQuery):
         await query.answer()
         await query.message.delete()
         umm = await query.message.reply_text(
-            f"ᴄʟᴏꜱᴇ ʙʏ : {query.from_user.mention}"
+            f"**• داخرا لەلایەن : {query.from_user.mention} 🖤**"
         )
-        await asyncio.sleep(2)
+        await asyncio.sleep(10)
         await umm.delete()
     except:
         pass
