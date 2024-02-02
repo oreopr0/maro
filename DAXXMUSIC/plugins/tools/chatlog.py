@@ -91,6 +91,7 @@ WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ♥�
 async def addtsrb(client, m):
     global new_memeber_photo, message
     if m.new_chat_member and not m.old_chat_member or member.new_chat_member.status in {"banned", "left", "restricted"}:
+        chat_id = m.chat.id
         chat = m.chat
         user_id = m.from_user.id
         new_memeber = await app.get_chat(m.from_user.id)  # get member data
