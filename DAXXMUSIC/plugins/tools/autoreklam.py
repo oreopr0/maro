@@ -6,37 +6,34 @@ from DAXXMUSIC.utils.database import get_served_chats
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-MESSAGE = f"""**چەناڵێک تایبەت بە وتە و ڤیدیۆی بێ لۆگۆ 🌚🖤!
+MESSAGE = f"""**
+➲چەناڵێک تایبەت بە وتە و ڤیدیۆی بێ لۆگۆ 🌚🖤!
 
-هەرئێستا جۆینی بکە پەشیمان نابیەوە [”﮼احساس“ 🖤!](t.me/EHS4SS)
+➲ هەرئێستا جۆینی بکە پەشیمان نابیەوە [وتەھ 🖤](t.me/wtay_jw4n)
 
-بۆتێکی گۆرانی شاز و بێ حەل
-➥ پشتگێری - تێبینی لێفت، تاگ کردن، باند - میوت، داگرتنی ڤیدیۆ و گۆرانی، ڤیدیۆی تیك تۆك ...
-
-➲ بۆتی جۆین » [𝑰𝑸 𝑱𝑶𝑰𝑵 𝑩𝑶𝑻](t.me/IQJOBOT)
-
-➲ بۆتی گۆرانی » [𝙄𝙌 𝙈𝙐𝙎𝙄𝘾 ♥️•](t.me/IQMCBOT)
+➲ لینکی کەناڵ 
+https://t.me/Wtay_jw4n
 **"""
 
 BUTTON = reply_markup=InlineKeyboardMarkup(
             [
                 [
                       InlineKeyboardButton(
-                        "تێکستی بچووك 🫧🖤»", url=f"https://t.me/EHS4SS"),
+                        "تێکستی بچووك 🫧🖤»", url=f"https://t.me/Wtay_jw4n"),
                       InlineKeyboardButton(
-                        "وتەی ئاشقانە 🫧🖤»", url=f"https://t.me/EHS4SS"),
+                        "وتەی ئاشقانە 🫧🖤»", url=f"https://t.me/Wtay_jw4n"),
                 ],[
                       InlineKeyboardButton(
-                        "جۆینی کەناڵ بکە 🫧🖤»", url=f"https://t.me/EHS4SS")
+                        "جۆینی کەناڵ بکە 🫧🖤»", url=f"https://t.me/Wtay_jw4n")
                 ],[
                        InlineKeyboardButton(
-                          "بۆتی جۆین 🫧🖤»", url=f"https://t.me/IQJOBOT"),
+                          "وتەھ 🫧🖤»", url=f"https://t.me/Wtay_jw4n"),
                        InlineKeyboardButton(
-                           "بۆتی گۆرانی 🫧🖤»", url=f"https://t.me/IQMCBOT"),
+                           "ئێرە دابگرە 🫧🖤»", url=f"https://t.me/Wtay_jw4n"),
                 ],[
 
                         InlineKeyboardButton(
-                        "◌sᴏᴜʀᴄᴇ ᴀʟɪɴᴀ◌", url=f"https://t.me/MGIMT"),
+                        "بۆتی جۆین 🫧🖤»", url=f"https://t.me/iqjobot"),
 
 
                 ],
