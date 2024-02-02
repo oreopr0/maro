@@ -19,6 +19,7 @@ from PIL import Image, ImageDraw, ImageFont
 from asyncio import sleep
 from pyrogram import filters, Client, enums
 from pyrogram.enums import ParseMode
+from pyrogram.types import ChatMemberUpdated
 
 
 photo = [
@@ -72,34 +73,71 @@ async def on_left_chat_member(_, message: Message):
         await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=left)
 
 
-#welcome
-@app.on_message(filters.new_chat_members, group=3)
-async def _greet(_, message):    
-    chat = message.chat
-    
-    for member in message.new_chat_members:
-        
-            count = await app.get_chat_members_count(chat.id)
 
-            msg = (
-                f"**🫶🏻 بەخێربێی بۆ گرووپ {message.from_user.mention} 💘\n\n**"
-                f"**🍻 ناوی گرووپ: {message.chat.title}\n**"
-                f"**🧚🏻‍♀ یوزەری گرووپ: @{message.chat.username}\n**"
-                f"**🚀 ئایدی: {member.id}\n**"
-                f"**👻یوزەر: @{member.username}\n**"
-                f"**🌚 ژمارەی ئەندام {count} 🍓**"
-            )
-            await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, 
-            reply_markup=InlineKeyboardMarkup(
+
+
+# Welcoem message
+WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ♥️•**\n
+**✧ ¦ ناوی گرووپ ← {} **
+**✧ ¦ ناوت ← {} **
+**✧ ¦ یوزەرت ← @{} **
+**✧ ¦ ئایدیت** ← `{}`
+**✧ ¦ بەروار** ← {}
+**✧ ¦ بایۆ ← {}** 
+"""
+
+# On Join Group member .
+@app.on_chat_member_updated(filters.group)
+async def addtsrb(client, m):
+    global new_memeber_photo, message
+    if m.new_chat_member and not m.old_chat_member or member.new_chat_member.status in {"banned", "left", "restricted"}:
+        chat = m.chat
+        user_id = m.from_user.id
+        new_memeber = await app.get_chat(m.from_user.id)  # get member data
+        # Welcome Message
+        message = WELCOME_MESSAGE.format(
+            m.chat.title
+            m.from_user.mention,
+            m.from_user.username,
+            m.from_user.id,
+            str(datetime.now()),
+            new_memeber.bio)
+        new_memeber_photo = None
+    # get member profile photo
+    async for photo in app.get_chat_photos(m.from_user.id, limit=1):
+        new_memeber_photo = photo
+    # send Welcome Message
+    if new_memeber_photo != None:
+        message_data = await app.send_photo(
+        photo=new_memeber_photo.file_id, chat_id=chat_id, caption=message,
+        reply_markup=InlineKeyboardMarkup(
+            [
                 [
-                    [    
-                        InlineKeyboardButton(f"⦿ زیادم بکە بۆ کەناڵت ⦿", url=f"https://t.me/IQMCBOT?startchannel=true"),
-                    ],[
-                        InlineKeyboardButton(text="⦿ زیادم بکە بۆ گرووپت ⦿",
+                    InlineKeyboardButton(text="➕ زیادم بکە بۆ گرووپت ➕",
                                          url=f"https://t.me/IQMCBOT?startgroup=true"),
-                  ]
+
+                ],[
+                    InlineKeyboardButton(text="• کەناڵی بۆت •",
+                                         url=f"https://t.me/MGIMT"),
+                ]
 
               ],  
 
            ),
         )
+    else:
+        message_data = await app.send_message(text=message, chat_id=chat_id,
+        reply_markup = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="➕ زیادم بکە بۆ گرووپت ➕",
+                                         url = f"https://t.me/IQMCBOT?startgroup=true"),
+                ],[
+                    InlineKeyboardButton(text="• کەناڵی بۆت •",
+                                          url=f"https://t.me/MGIMT"),
+                ]  
+
+            ],
+
+        ),
+                                              )
