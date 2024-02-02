@@ -97,7 +97,7 @@ async def addtsrb(client, m):
         new_memeber = await app.get_chat(m.from_user.id)  # get member data
         # Welcome Message
         message = WELCOME_MESSAGE.format(
-            m.chat.title
+            m.chat.title,
             m.from_user.mention,
             m.from_user.username,
             m.from_user.id,
