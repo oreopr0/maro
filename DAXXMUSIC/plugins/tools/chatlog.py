@@ -78,10 +78,10 @@ async def on_left_chat_member(_, message: Message):
 
 # Welcoem message
 WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ♥️•**\n
-**✧ ¦ ناوی گرووپ ← {} **
-**✧ ¦ ناوت ← {} **
-**✧ ¦ یوزەرت ← @{} **
-**✧ ¦ ئایدیت** ← `{}`
+**✧ ¦ ناوی گرووپ ← {m.chat.title} **
+**✧ ¦ ناوت ← {m.from_user.mention} **
+**✧ ¦ یوزەرت ← @{m.from_user.username} **
+**✧ ¦ ئایدیت** ← `{m.from_user.id}`
 **✧ ¦ بەروار** ← {}
 **✧ ¦ بایۆ ← {}** 
 """
@@ -92,15 +92,10 @@ async def addtsrb(client, m):
     global new_memeber_photo, message
     if m.new_chat_member and not m.old_chat_member or member.new_chat_member.status in {"banned", "left", "restricted"}:
         chat_id = m.chat.id
-        chat = m.chat
         user_id = m.from_user.id
         new_memeber = await app.get_chat(m.from_user.id)  # get member data
         # Welcome Message
         message = WELCOME_MESSAGE.format(
-            m.chat.title,
-            m.from_user.mention,
-            m.from_user.username,
-            m.from_user.id,
             str(datetime.now()),
             new_memeber.bio)
         new_memeber_photo = None
