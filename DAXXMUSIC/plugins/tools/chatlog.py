@@ -78,21 +78,19 @@ async def on_left_chat_member(_, message: Message):
 
 # Welcoem message
 WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ♥️•**\n
-**✧ ¦ ناوی گرووپ ← {m.chat.title} **
-**✧ ¦ ناوت ← {m.from_user.mention} **
-**✧ ¦ یوزەرت ← @{m.from_user.username} **
-**✧ ¦ ئایدیت** ← `{m.from_user.id}`
+**✧ ¦ ناوی گرووپ ← {member.chat.title} **
+**✧ ¦ ناوت ← {user.mention} **
+**✧ ¦ یوزەرت ← @{user.username} **
+**✧ ¦ ئایدیت** ← `{user.id}`
 **✧ ¦ بەروار** ← {}
 **✧ ¦ بایۆ ← {}** 
 """
 
-# On Join Group member .
 @app.on_chat_member_updated(filters.group)
-async def addtsrb(client, m):
+async def addtsrb(app, m, member):
     global new_memeber_photo, message
     if not member.new_chat_member or member.new_chat_member.status in {"banned", "left", "restricted"} or member.old_chat_member:
         chat_id = member.chat.id
-        user_id = m.from_user.id
         new_memeber = await app.get_chat(m.from_user.id)  # get member data
         # Welcome Message
         message = WELCOME_MESSAGE.format(
@@ -117,7 +115,7 @@ async def addtsrb(client, m):
                                          url=f"https://t.me/MGIMT"),
                 ]
 
-              ],  
+              ],
 
            ),
         )
@@ -131,7 +129,7 @@ async def addtsrb(client, m):
                 ],[
                     InlineKeyboardButton(text="• کەناڵی بۆت •",
                                           url=f"https://t.me/MGIMT"),
-                ]  
+                ]
 
             ],
 
