@@ -87,7 +87,7 @@ WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ♥�
 """
 
 @app.on_chat_member_updated(filters.group)
-async def addtsrb(app, m, member):
+async def addtsrb(_, m, member):
     global new_memeber_photo, message
     if not member.new_chat_member or member.new_chat_member.status in {"banned", "left", "restricted"} or member.old_chat_member:
         chat_id = member.chat.id
