@@ -308,7 +308,7 @@ def panel_markup_1(_, videoid, chat_id):
                 callback_data=f"MainMarkup {videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text=_["BACK_BUTTON"],
+                text=_["NEXT"],
                 callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
             ),
         ],
