@@ -2,9 +2,9 @@ import math
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
 
-from VIPMUSIC.utils.formatters import time_to_seconds
+from DAXXMUSIC.utils.formatters import time_to_seconds
 
-from VIPMUSIC import app
+from DAXXMUSIC import app
 
 def track_markup(_, user_id, channel, fplay):
     buttons = [
