@@ -91,7 +91,7 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
                 profile_path=photo,
             )
         
-            caption = f"**• لێفتی ئەندام\n\n• ئەندام: {user.mention} لێفتی کرد لە گرووپ💔\n• خوات لەگەڵ بەم زوانە دەتبینمەوە!**"
+            caption = f"**• ئەندامێك لێفتی کرد لە گرووپ\n\n• ئەندام: {user.mention} لێفتی کرد لە گرووپ💔\n• خوات لەگەڵ بەم زوانە دەتبینمەوە!**"
             button_text = "๏ ئەندام ๏"
 
             # Generate a deep link to open the user's profile
