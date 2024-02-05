@@ -15,12 +15,18 @@ def queue_markup(
     not_dur = [
         [
             InlineKeyboardButton(
-                text=_["QU_B_1"],
-                callback_data=f"GetQueued {CPLAY}|{videoid}",
-            ),
-            InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
                 callback_data="close",
+            ),
+            InlineKeyboardButton(
+                text=_["QU_B_1"],
+                callback_data=f"GetQueued {CPLAY}|{videoid}",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["S_B_6"],
+                url="https://t.me/mgimt",
             ),
         ]
     ]
