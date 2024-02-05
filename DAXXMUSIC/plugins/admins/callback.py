@@ -1,5 +1,13 @@
 import asyncio
 import random
+from pyrogram.enums import ChatMemberStatus
+from pyrogram.errors import (
+    ChatAdminRequired,
+    InviteRequestSent,
+    UserAlreadyParticipant,
+    UserNotParticipant,
+)
+from DAXXMUSIC.utils.database import get_assistant
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from DAXXMUSIC import YouTube, app
@@ -98,6 +106,18 @@ async def del_back_playlist(client, CallbackQuery, _):
         )
     except:
         return
+
+@app.on_callback_query(filters.regex("unban_assistant"))
+async def unban_assistant(_, callback: CallbackQuery):
+    chat_id = callback.message.chat.id
+    userbot = await get_assistant(chat_id)
+    
+    try:
+        await app.unban_chat_member(chat_id, userbot.id)
+        await callback.answer("<b>⇜ بە سەرکەوتوویی باندی ئەکاونتی یاریدەدەر لادرا♥\n\n⇜ ئێستا دەتوانی گۆرانی لێ بدەیت🎻\n\n⇜ لێدانی گۆرانی : /play + ناوی گۆرانی ⎋</b>", show_alert=True)
+    except Exception as e:
+        await callback.answer(f"<b>⇜ شکستی هێنا لە لادانی باندی ئەکاونتی یاریدەدەر ڕۆڵم نییە\n\n⇜ ڕۆڵم پێبدە بۆ لادانی باندی ئەکاونتی یاریدەدەر ⎋</b>", show_alert=True)
+
 
 checker = {}
 upvoters = {}
