@@ -27,7 +27,7 @@ async def bass_boost_command(client, message):
             os.remove(boosted_audio)
 
         else:
-            await message.reply_text("Please reply to an audio file with /bass to apply the bass boost effect.")
+            await message.reply_text("يرجى الرد على ملف صوتي باستخدام /bass لتطبيق تأثير تعزيز الجهير.")
     except Exception as e:
         await message.reply_text(f"🚫")
 
@@ -39,7 +39,7 @@ def apply_bass_boost(audio_path):
     boosted_audio = audio.low_pass_filter(200).high_pass_filter(70).apply_gain(30)
 
     # Save the boosted audio as a temporary file
-    boosted_audio_path = "⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌.mp3"
+    boosted_audio_path = "⧉• 𝙎𝙊𝙐𝙍𝘾𝞝.mp3"
     boosted_audio.export(boosted_audio_path, format="mp3")
 
     return boosted_audio_path
