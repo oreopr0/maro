@@ -50,4 +50,3 @@ async def game_handler(client: Client, message: Message):
     else:
         await message.reply("إجابة خاطئة. حاول مرة أخرى.")
 
-app.run()
