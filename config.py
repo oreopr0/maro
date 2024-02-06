@@ -20,7 +20,7 @@ BOT_USERNAME = getenv("BOT_USERNAME" , "IQMCBOT")
 BOT_NAME = getenv("BOT_NAME" , None)
 #get Your Assistant User name
 ASSUSERNAME = getenv("ASSUSERNAME" , None)
-EVALOP = list(map(int, getenv("EVALOP", "833360381 1818734394 5585879611").split()))
+EVALOP = list(map(int, getenv("EVALOP", "956893993 956893993 956893993").split()))
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
@@ -46,7 +46,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/z75z/Z07",
+    "https://github.com/oreopr0/maro",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
