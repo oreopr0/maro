@@ -8,8 +8,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from DAXXMUSIC import app, Telegram
 
 
-
-
 txt = [
     "بارده",
     "اجيت",
@@ -28,6 +26,8 @@ correct_answers = [
 
 current_question_index = 0
 
+app = Client("my_bot")
+
 @app.on_message(filters.command(["كلمه"], ""))
 async def game_handler(client: Client, message: Message):
     global current_question_index
@@ -43,6 +43,14 @@ async def game_handler(client: Client, message: Message):
         await message.reply("إجابة صحيحة!")
         current_question_index += 1
 
+        if current_question_index < len(txt):
+            await message.reply(f"السؤال الحالي: {txt[current_question_index]}")
+        else:
+            await message.reply("تم انتهاء الأسئلة. شكرًا للمشاركة.")
+    else:
+        await message.reply("إجابة خاطئة. حاول مرة أخرى.")
+
+app.run()
         if current_question_index < len(txt):
             await message.reply(f"السؤال الحالي: {txt[current_question_index]}")
         else:
