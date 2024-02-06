@@ -26,7 +26,6 @@ correct_answers = [
 
 current_question_index = 0
 
-app = Client("my_bot")
 
 @app.on_message(filters.command(["كلمه"], ""))
 async def game_handler(client: Client, message: Message):
