@@ -25,7 +25,7 @@ async def bass_boost_command(client, message):
             os.remove(boosted_audio)
 
         else:
-            await message.reply_text("**ڕیپلەی گۆرانییەکی دەنگی بکە بۆ گۆڕینی\nجۆری دەنگ و کوالێتی**")
+            await message.reply_text("**أعد تشغيل أغنية صوتية لتغيير\nنوع الصوت وجودته**")
     except Exception as e:
         await message.reply_text(f"🚫")
 
