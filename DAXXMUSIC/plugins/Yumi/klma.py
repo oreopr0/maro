@@ -1,11 +1,11 @@
 import asyncio
+import random
 from pyrogram import Client, filters
 from strings.filters import command
 from pyrogram.enums import ParseMode, ChatMemberStatus
 from config import OWNER_ID
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from DAXXMUSIC import app, Telegram
-import random
 
 
 
@@ -173,15 +173,14 @@ correct_answers = [
 
 current_question_index = 0
 
-@app.on_message(filters.command(["كلمه"], ""))
-async def game_handler(client: Client, message: Message):
+@app.on_message(filters.command(["كلمة"], ""))
+async def game_handler(client, message):
     global current_question_index
 
     if current_question_index >= len(txt):
         await message.reply("تم انتهاء الأسئلة.")
         return
 
-    current_question = txt[current_question_index]
     correct_answer = correct_answers[current_question_index]
 
     if message.text.lower() == correct_answer:
