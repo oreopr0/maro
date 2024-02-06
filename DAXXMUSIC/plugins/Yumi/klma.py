@@ -184,13 +184,13 @@ async def game_handler(client: Client, message: Message):
     current_question = txt[current_question_index]
     correct_answer = correct_answers[current_question_index]
 
-    if message.text.strip() == correct_answer:
-    await message.reply("إجابة صحيحة!")
-    current_question_index += 1
+    if message.text.lower() == correct_answer:
+        await message.reply("إجابة صحيحة!")
+        current_question_index += 1
 
-    if current_question_index < len(txt):
-        await message.reply(f"السؤال الحالي: {txt[current_question_index]}")
+        if current_question_index < len(txt):
+            await message.reply(f"السؤال الحالي: {txt[current_question_index]}")
+        else:
+            await message.reply("تم انتهاء الأسئلة. شكرًا للمشاركة.")
     else:
-        await message.reply("تم انتهاء الأسئلة. شكرًا للمشاركة.")
-else:
-    await message.reply("إجابة خاطئة. حاول مرة أخرى.")
+        await message.reply("إجابة خاطئة. حاول مرة أخرى.")
