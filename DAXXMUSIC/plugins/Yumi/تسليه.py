@@ -58,7 +58,7 @@ async def idljjopen(client:Client, message:Message):
     else:
         return await message.reply_text(f"** {message.from_user.mention} تۆ ئەدمین نیت لێرە💔•**")
 ##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]  
-@app.on_message(command(['ززززززززززززز','ززززززززززز']))
+@app.on_message(command(['ز','زوجني']))
 def iddd(client:Client, message:Message):
     chat_id = message.chat.id
     if chat_id in iddof:
@@ -68,9 +68,9 @@ def iddd(client:Client, message:Message):
         if not member.user.is_bot
     ]
     random_member = random.choice(members)
-    random_member_mention = f"[{random_member.user.first_name}](tg://user?id={random_member.user.id})"
+    random_member_mention = f"[{random_member.user.first_name}]( tg://openmessage?user_id={random_member.user.id} )"
     random_message = random.choice([
-        f"• اخترت لك هذا الشخص {random_member_mention} \n 🙈♥️",
+        f"• اخترت لك هذا الشخص \n {random_member_mention} \n 🙈♥️",
         f"• اخترت لك هذا الشخص \n {random_member_mention} \n **"
     ])
     client.send_message(chat_id, random_message, reply_to_message_id= message.id)
